@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.CategoryRepository">
+    <!-- CategoryVO 的 resultMap -->
+    <resultMap id="CategoryWithSiteListVOMap" type="CategoryWithSiteListVO">
+        <!-- 继承父类 CategoryVO 字段 -->
+        <id column="category_id" property="categoryId"/>
+        <result column="category_name" property="categoryName"/>
+        <result column="create_time" property="createTime"/>
+        <!-- 一对多：一个分类 对应 多个站点 -->
+        <collection property="sites" ofType="SiteVO" resultMap="SiteVOMap"/>
+    </resultMap>
+    <!--  SiteVO 的 resultMap  -->
+    <resultMap id="SiteVOMap" type="SiteVO">
+        <id property="siteId" column="site_id"/>
+        <result property="siteName" column="site_name"/>
+        <result property="description" column="description"/>
+        <result property="ico" column="ico"/>
+        <result property="siteUrl" column="site_url"/>
+        <result property="createTime" column="create_time"/>
+        <result property="categoryId" column="category_id"/>
+    </resultMap>
+    <select id="selectCategoryOption" resultType="Category">
+        select category_id, category_name from `category`
+    </select>
+    <select id="selectCategoryWithSites" resultMap="CategoryWithSiteListVOMap">
+        select
+        c.*, s.*
+        from
+        `category` c
+        left join
+        `site` s on c.category_id = s.category_id
+        order by c.category_id
+    </select>
+    <!-- 查询所有分类及其站点数量 -->
+    <select id="selectCategoryWithSiteCount" resultType="CategoryWithSiteCountVO">
+        select
+        c.*,
+        count(s.site_id) as site_count
+        from
+        `category` c
+        left join
+        `site` s on c.category_id = s.category_id
+        <where>
+            <if test="categoryName != null">category_name like concat('%', #{categoryName}, '%')</if>
+        </where>
+        group by
+        c.category_id, c.category_name, c.create_time
+        order by
+        c.category_id
+    </select>
+    <insert id="insert" parameterType="Category">
+        insert into `category` (category_name, create_time) values (#{categoryName}, #{createTime})
+    </insert>
+    <!-- 更新数据 -->
+    <update id="updateById">
+        update `category` set category_name = #{categoryName} where category_id = #{categoryId}
+    </update>
+    <!-- 删除数据 -->
+    <delete id="deleteById">
+        delete from `category` where category_id = #{categoryId}
+    </delete>
+
+    <!-- Agent: 统计分类总数 -->
+    <select id="selectCategoryCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM category
+    </select>
+</mapper>

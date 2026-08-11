@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.NoteRepository">
+    <select id="selectList" resultType="Note">
+        select note_id, note_title, note_content, sort, create_time
+        from note
+        order by sort, note_id
+    </select>
+
+    <select id="selectMenuList" resultType="Note">
+        select note_id, note_title, sort
+        from note
+        order by sort, note_id
+    </select>
+
+    <select id="selectById" resultType="Note">
+        select note_id, note_title, note_content, sort, create_time
+        from note
+        where note_id = #{noteId}
+    </select>
+
+    <insert id="insert" parameterType="Note" useGeneratedKeys="true" keyProperty="noteId" keyColumn="noteId">
+        insert into note (note_title, note_content, sort, create_time)
+        values (#{noteTitle}, #{noteContent}, #{sort}, #{createTime})
+    </insert>
+
+    <update id="updateById">
+        update note
+        set note_title = #{noteTitle}, note_content = #{noteContent}, sort = #{sort}
+        where note_id = #{noteId}
+    </update>
+
+    <delete id="deleteById">
+        delete from note where note_id = #{noteId}
+    </delete>
+    <!--  统计笔记总数  -->
+    <select id="selectNoteCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM note
+    </select>
+
+    <!-- Agent: 关键词搜索笔记（标题/内容模糊匹配） -->
+    <select id="selectByKeyword" resultType="Note">
+        select note_id, note_title, note_content, sort, create_time
+        from note
+        where note_title like concat('%', #{keyword}, '%')
+           or note_content like concat('%', #{keyword}, '%')
+        order by create_time desc
+    </select>
+</mapper>

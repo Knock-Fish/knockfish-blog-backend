@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.SiteRepository">
+    <!--  SiteVO 的 resultMap  -->
+    <resultMap id="SiteWithCategoryVOMap" type="SiteWithCategoryVO">
+        <id property="siteId" column="site_id"/>
+        <result property="siteName" column="site_name"/>
+        <result property="description" column="description"/>
+        <result property="ico" column="ico"/>
+        <result property="siteUrl" column="site_url"/>
+        <result property="createTime" column="create_time"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="categoryName" column="category_name"/>
+    </resultMap>
+    <!-- 查询网站 -->
+    <select id="selectSiteWithCategory" resultMap="SiteWithCategoryVOMap">
+        select s.*, c.category_name as category_name
+        from `site` s
+        left join
+        `category` c on s.category_id = c.category_id
+        <where>
+            <if test="siteName != null">site_name like concat('%', #{siteName}, '%')</if>
+        </where>
+    </select>
+    <!--  插入数据  -->
+    <insert id="insert" parameterType="Site">
+        insert into `site` (site_name, description, ico, site_url, create_time, category_id)
+        values (#{siteName}, #{description}, #{ico}, #{siteUrl}, #{createTime}, #{categoryId})
+    </insert>
+    <!--  更新数据  -->
+    <update id="updateById" parameterType="com.knockfish.entity.Site">
+        update `site`
+        <trim prefix="set" suffixOverrides=",">
+            <if test="siteName != null and siteName != ''">
+                site_name = #{siteName},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="ico != null and ico != ''">
+                ico = #{ico},
+            </if>
+            <if test="siteUrl != null and siteUrl != ''">
+                site_url = #{siteUrl},
+            </if>
+            <if test="categoryId != null">
+                category_id = #{categoryId},
+            </if>
+        </trim>
+        where site_id = #{siteId}
+    </update>
+    <!--  删除数据  -->
+    <delete id="deleteById">
+        delete from `site` where site_id = #{siteId}
+    </delete>
+    <!--  统计站点总数  -->
+    <select id="selectSiteCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM site
+    </select>
+
+    <!-- Agent: 获取站点列表，可按分类ID过滤 -->
+    <select id="selectSiteListForAgent" resultMap="SiteWithCategoryVOMap">
+        select s.site_id,
+               s.site_name,
+               s.description,
+               s.ico,
+               s.site_url,
+               s.create_time,
+               s.category_id,
+               c.category_name as category_name
+        from `site` s
+        left join `category` c on s.category_id = c.category_id
+        <where>
+            <if test="categoryId != null and categoryId != 0">
+                AND s.category_id = #{categoryId}
+            </if>
+        </where>
+        order by s.create_time desc
+    </select>
+</mapper>

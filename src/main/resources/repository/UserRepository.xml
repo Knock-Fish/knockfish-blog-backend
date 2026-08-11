@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.knockfish.repository.UserRepository">
+
+    <select id="selectPasswordByUsername" resultType="java.lang.String">
+        select password
+        from `user`
+        where username = #{username}
+    </select>
+
+    <select id="selectPasswordById" resultType="java.lang.String">
+        select password
+        from `user`
+        where user_id = #{userId}
+    </select>
+
+    <select id="selectAllUser" resultType="User">
+        select user_id, username, email, nickname, avatar, description, github_url, bilibili_url, background, create_time
+        from `user`
+        <where>
+            <if test="username != null and username != ''">
+                username like concat(#{username}, '%')
+            </if>
+            <if test="nickname != null and nickname != ''">
+                and nickname like concat(#{nickname}, '%')
+            </if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="userId" keyColumn="userId">
+        insert into `user`
+        (username, nickname, password, email, avatar, description, github_url, bilibili_url, create_time)
+        values (#{username}, #{nickname}, #{password}, #{email}, #{avatar}, #{description}, #{githubUrl}, #{bilibiliUrl}, #{createTime})
+    </insert>
+
+    <select id="selectUserFrontById" resultType="UserFrontVO">
+        select
+        u.user_id,
+        u.username,
+        u.nickname,
+        u.email,
+        u.avatar,
+        u.description,
+        u.github_url,
+        u.bilibili_url,
+        (select count(1) from article a where a.user_id = u.user_id and a.status = 'PUBLISH') as articleCount,
+        (select count(1) from tag) as tagCount,
+        (select count(1) from site) as siteCount
+        from `user` u
+        where u.user_id = #{userId}
+    </select>
+
+    <select id="selectUserById" resultType="User">
+        select user_id, username, nickname, email, avatar, description, github_url, bilibili_url, background 
+        from `user` 
+        where user_id = #{userId}
+    </select>
+
+    <select id="selectByUsername" resultType="User">
+        select user_id, username, nickname, email, avatar, description, github_url, bilibili_url, background, password, create_time
+        from `user`
+        where username = #{username}
+    </select>
+
+    <update id="updatePassword">
+        update `user`
+        set password = #{password}
+        where user_id = #{userId}
+    </update>
+
+    <update id="updateById">
+        update `user`
+        set nickname = #{nickname},
+        email = #{email},
+        avatar = #{avatar},
+        description = #{description},
+        github_url = #{githubUrl},
+        bilibili_url = #{bilibiliUrl},
+        background = #{background}
+        where user_id = #{userId}
+    </update>
+
+    <select id="selectRolesByUserId" resultType="java.lang.String">
+        select r.role_name
+        from user_role ur
+        inner join role r on ur.role_id = r.role_id
+        where ur.user_id = #{userId}
+    </select>
+
+    <select id="selectUserRoleVOByUserId" resultType="com.knockfish.vo.user.UserRoleVO">
+        select r.role_id, r.role_name
+        from user_role ur
+        inner join role r on ur.role_id = r.role_id
+        where ur.user_id = #{userId}
+    </select>
+
+</mapper>
