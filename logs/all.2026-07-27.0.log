@@ -1,0 +1,246 @@
+2026-07-27 01:49:05.327 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-07-27 01:49:06.564 [http-nio-8081-exec-34] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 01:49:06.905 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":53,"title":"闭包和柯里化","cover":"https://fishbarn.cn/blog/1/cover/dd1138ab-abd0-403d-81b7-f11957b09af0.webp","description":"JavaScript 中闭包与柯里化的核心概念、实现原理及应用场景","content":"# 前置基础\n## 作用域\n作用域决定变量的可访问范围：\n- **全局作用域**：整个程序可访问\n- **函数作用域**：仅函数内部可访问\n- **块级作用域**：`let`和`const` 声明的变量，仅 `{}` 内有效\n\n```javascript\nfunction foo() {\n    const localVar = '函数作用域'\n    \n    if (true) {\n        const blockVar = '块级作用域'\n        console.log(blockVar)\n    }\n    console.log(blockVar) // ReferenceError\n}\n```\n## 执行上下文与作用域链\n函数调用时会创建执行上下文（Execution Context），包含三个核心部分：\n- **变量环境**：存储函数内部声明的变量、函数、参数\n- **作用域链**：由当前变量环境 + 父级作用域链组成，用于变量查找\n- **this 指向**：确定 `this` 的绑定\n```javascript\nconst globalVar = '全局'\n\nfunction outer() {\n    const outerVar = '外层'\n    \n    function inner() {\n        const innerVar = '内层'\n        // 作用域链：inner 变量环境 → outer 变量环境 → 全局变量环境\n        console.log(innerVar)  // 自身作用域查找\n        console.log(outerVar)  // 沿作用域链向上查找\n        console.log(globalVar) // 继续向上查找\n    }\n    \n    return inner\n}\n\nconst fn = outer()\nfn()\n```\nJS 引擎沿作用域链从内向外查找变量，找到即停止，找不到则抛出 `ReferenceError`\n## 变量提升\n`var` 声明会提升到作用域顶部，初始化不提升；`let`和`const` 存在暂时性死区（TDZ）：\n```javascript\nconsole.log(a) // undefined\nvar a = 1\n\nconsole.log(b) // ReferenceError\nlet b = 2\n```\n## 垃圾回收\n函数执行完毕后，活动对象（AO）通常会被 GC 回收。但如果活动对象被外部引用，GC 不会回收它——**这是闭包的本质**\n```javascript\nfunction createClosure() {\n    const largeData = new Array(1000000).fill('x') // 大数组\n    \n    return function() {\n        console.log(largeData.length)\n    }\n}\n\nconst closure = createClosure()\n// largeData 不会被回收，因为被闭包引用\nclosure = null // 解除引用后，largeData 才可被回收\n```\n# 闭包\n**什么是闭包？**\n\n闭包是指有权访问另一个函数作用域中变量的函数\n\n**形成条件**\n1. 存在函数嵌套\n2. 内部函数引用了外部函数作用域中的变量 / 函数\n3. 内部函数在外部函数执行结束后，依然被外部引用\n\n例如：\n```javascript\nfunction createCounter() {\n    let count = 0\n    \n    return function() {\n        count++\n        return count\n    };\n}\n\nconst counter = createCounter()\ncounter() // 1\ncounter() // 2\ncounter() // 3\n```\n`createCounter` 执行完毕后，返回的函数仍能访问 `count` 并记住其状态，这就是闭包\n\n**注意事项**\n\n内存泄漏：闭包持有变量不会被回收，长时间运行的应用中要及时释放\n\n性能：作用域链查找有开销，闭包中不要存放大量数据。\n\nthis 指向：闭包中的 `this` 可能不符合预期，使用 `that` 保存或箭头函数：","status":"DRAFT","publishTime":"2026-07-26 22:09:29","updatedTime":null,"fileIds":null,"tags":[3]}
+2026-07-27 01:49:07.109 [http-nio-8081-exec-34] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=53
+2026-07-27 01:49:07.150 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 236ms
+2026-07-27 01:49:07.305 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 01:49:07.376 [http-nio-8081-exec-38] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 01:49:07.420 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 01:49:07.434 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 13ms
+2026-07-27 02:00:00.589 [scheduling-1] INFO  com.knockfish.scheduler.FileCleanupScheduler - ========== 文件资源定时清理任务开始 ==========
+2026-07-27 02:00:00.598 [scheduling-1] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - ========== 文件资源清理任务开始 ==========
+2026-07-27 02:00:00.654 [scheduling-1] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 未发现需要清理的孤立文件，任务结束
+2026-07-27 02:00:00.656 [scheduling-1] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - ========== 文件资源清理任务结束 ==========
+2026-07-27 02:35:38.299 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-07-27 02:35:38.450 [http-nio-8081-exec-37] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 02:35:38.554 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":53,"title":"闭包和柯里化","cover":"https://fishbarn.cn/blog/1/cover/dd1138ab-abd0-403d-81b7-f11957b09af0.webp","description":"JavaScript 中闭包与柯里化的核心概念、实现原理及应用场景","content":"# 前置基础\n## 作用域\n作用域决定变量的可访问范围：\n- **全局作用域**：整个程序可访问\n- **函数作用域**：仅函数内部可访问\n- **块级作用域**：`let`和`const` 声明的变量，仅 `{}` 内有效\n\n```javascript\nfunction foo() {\n    const localVar = '函数作用域'\n    \n    if (true) {\n        const blockVar = '块级作用域'\n        console.log(blockVar)\n    }\n    console.log(blockVar) // ReferenceError\n}\n```\n## 执行上下文与作用域链\n函数调用时会创建执行上下文（Execution Context），包含三个核心部分：\n- **变量环境**：存储函数内部声明的变量、函数、参数\n- **作用域链**：由当前变量环境 + 父级作用域链组成，用于变量查找\n- **this 指向**：确定 `this` 的绑定\n```javascript\nconst globalVar = '全局'\n\nfunction outer() {\n    const outerVar = '外层'\n    \n    function inner() {\n        const innerVar = '内层'\n        // 作用域链：inner 变量环境 → outer 变量环境 → 全局变量环境\n        console.log(innerVar)  // 自身作用域查找\n        console.log(outerVar)  // 沿作用域链向上查找\n        console.log(globalVar) // 继续向上查找\n    }\n    \n    return inner\n}\n\nconst fn = outer()\nfn()\n```\nJS 引擎沿作用域链从内向外查找变量，找到即停止，找不到则抛出 `ReferenceError`\n## 变量提升\n`var` 声明会提升到作用域顶部，初始化不提升；`let`和`const` 存在暂时性死区（TDZ）：\n```javascript\nconsole.log(a) // undefined\nvar a = 1\n\nconsole.log(b) // ReferenceError\nlet b = 2\n```\n## 垃圾回收\n函数执行完毕后，活动对象（AO）通常会被 GC 回收。但如果活动对象被外部引用，GC 不会回收它——**这是闭包的本质**\n```javascript\nfunction createClosure() {\n    const largeData = new Array(1000000).fill('x') // 大数组\n    \n    return function() {\n        console.log(largeData.length)\n    }\n}\n\nconst closure = createClosure()\n// largeData 不会被回收，因为被闭包引用\nclosure = null // 解除引用后，largeData 才可被回收\n```\n# 闭包\n**什么是闭包？**\n\n闭包是指有权访问另一个函数作用域中变量的函数\n\n**形成条件**\n1. 存在函数嵌套\n2. 内部函数引用了外部函数作用域中的变量 / 函数\n3. 内部函数在外部函数执行结束后，依然被外部引用\n\n例如：\n```javascript\nfunction createCounter() {\n    let count = 0\n    \n    return function() {\n        count++\n        return count\n    };\n}\n\nconst counter = createCounter()\ncounter() // 1\ncounter() // 2\ncounter() // 3\n```\n`createCounter` 执行完毕后，返回的函数仍能访问 `count` 并记住其状态，这就是闭包\n\n**注意事项**\n\n闭包持有变量不会被回收，如果不及时释放容易造成内存泄漏\n\n作用域链查找有开销，闭包中不要存放大量数据\n\n# 柯里化\n\n**什么是柯里化？**\n\n柯里化是将多参数函数转换为一系列单参数函数的过程\n\n```javascript\n// 普通函数\nfunction add(a, b, c) {\n    return a + b + c\n}\nadd(1, 2, 3) // 6\n\n// 手动柯里化\nfunction curriedAdd(a) {\n    return function(b) {\n        return function(c) {\n            return a + b + c\n        }\n    }\n}\ncurriedAdd(1)(2)(3) // 6\n```\n\n","status":"DRAFT","publishTime":"2026-07-26 22:09:29","updatedTime":null,"fileIds":null,"tags":[3]}
+2026-07-27 02:35:38.636 [http-nio-8081-exec-37] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=53
+2026-07-27 02:35:38.647 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 92ms
+2026-07-27 02:35:38.715 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 02:35:38.979 [http-nio-8081-exec-40] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 02:35:38.979 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 02:35:38.984 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 4ms
+2026-07-27 02:35:43.973 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown initiated...
+2026-07-27 02:35:43.980 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown completed.
+2026-07-27 14:00:36.445 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-27 14:00:36.709 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Starting KnockfishBlogBackendApplication using Java 17.0.9 with PID 17916 (E:\fish_blog\knockfish-blog-backend\target\classes started by DELL in E:\fish_blog\knockfish-blog-backend)
+2026-07-27 14:00:36.715 [main] DEBUG com.knockfish.KnockfishBlogBackendApplication - Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-07-27 14:00:36.717 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-27 14:00:43.586 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-07-27 14:00:43.592 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-27 14:00:43.593 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-07-27 14:00:43.764 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-27 14:00:46.579 [main] DEBUG com.knockfish.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-27 14:00:51.396 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-07-27 14:00:51.462 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Started KnockfishBlogBackendApplication in 17.486 seconds (process running for 21.405)
+2026-07-27 14:55:30.899 [http-nio-8081-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-27 14:55:31.451 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-27 14:55:31.451 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-27 14:55:31.451 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-27 14:55:31.451 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-27 14:55:31.807 [http-nio-8081-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Starting...
+2026-07-27 14:55:32.967 [http-nio-8081-exec-8] INFO  com.zaxxer.hikari.pool.HikariPool - KnockfishHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fd52266
+2026-07-27 14:55:32.970 [http-nio-8081-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Start completed.
+2026-07-27 14:55:33.436 [http-nio-8081-exec-6] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 14:55:33.436 [http-nio-8081-exec-5] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 14:55:33.437 [http-nio-8081-exec-8] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 14:55:33.437 [http-nio-8081-exec-7] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 14:55:33.832 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-27 14:55:33.833 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-27 14:55:33.864 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-27 14:55:33.867 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-27 14:55:33.877 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 43ms
+2026-07-27 14:55:33.898 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 30ms
+2026-07-27 14:55:33.904 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 39ms
+2026-07-27 14:55:34.330 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 497ms
+2026-07-27 15:07:59.407 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 15:07:59.436 [http-nio-8081-exec-14] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 15:07:59.466 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 15:07:59.640 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 173ms
+2026-07-27 15:08:07.256 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 15:08:07.284 [http-nio-8081-exec-16] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 15:08:07.286 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 15:08:07.287 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 1ms
+2026-07-27 15:08:09.060 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft, 方法: GET
+2026-07-27 15:08:09.100 [http-nio-8081-exec-18] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 15:08:09.101 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求开始 - GET /api/article/draft - ArticleController.getDraftByUserId - 参数: 无
+2026-07-27 15:08:09.135 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求成功 - 执行时间: 33ms
+2026-07-27 15:08:10.182 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/53, 方法: GET
+2026-07-27 15:08:10.204 [http-nio-8081-exec-20] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 15:08:10.207 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/53 - ArticleController.getArticleWithTagsById - 参数: 53
+2026-07-27 15:08:10.219 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 12ms
+2026-07-27 22:20:41.179 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-07-27 22:20:41.316 [http-nio-8081-exec-23] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:20:41.604 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":53,"title":"闭包和柯里化","cover":"https://fishbarn.cn/blog/1/cover/dd1138ab-abd0-403d-81b7-f11957b09af0.webp","description":"JavaScript 中闭包与柯里化的核心概念","content":"# 前置基础\n## 作用域\n作用域决定变量的可访问范围：\n- **全局作用域**：整个程序可访问\n- **函数作用域**：仅函数内部可访问\n- **块级作用域**：`let`和`const` 声明的变量，仅 `{}` 内有效\n\n```javascript\nfunction foo() {\n    const localVar = '函数作用域'\n    \n    if (true) {\n        const blockVar = '块级作用域'\n        console.log(blockVar)\n    }\n    console.log(blockVar) // ReferenceError\n}\n```\n## 执行上下文与作用域链\n函数调用时会创建执行上下文（Execution Context），包含三个核心部分：\n- **变量环境**：存储函数内部声明的变量、函数、参数\n- **作用域链**：由当前变量环境 + 父级作用域链组成，用于变量查找\n- **this 指向**：确定 `this` 的绑定\n```javascript\nconst globalVar = '全局'\n\nfunction outer() {\n    const outerVar = '外层'\n    \n    function inner() {\n        const innerVar = '内层'\n        // 作用域链：inner 变量环境 → outer 变量环境 → 全局变量环境\n        console.log(innerVar)  // 自身作用域查找\n        console.log(outerVar)  // 沿作用域链向上查找\n        console.log(globalVar) // 继续向上查找\n    }\n    \n    return inner\n}\n\nconst fn = outer()\nfn()\n```\nJS 引擎沿作用域链从内向外查找变量，找到即停止，找不到则抛出 `ReferenceError`\n## 变量提升\n`var` 声明会提升到作用域顶部，初始化不提升；`let`和`const` 存在暂时性死区（TDZ）：\n```javascript\nconsole.log(a) // undefined\nvar a = 1\n\nconsole.log(b) // ReferenceError\nlet b = 2\n```\n## 垃圾回收\n函数执行完毕后，活动对象（AO）通常会被 GC 回收。但如果活动对象被外部引用，GC 不会回收它——**这是闭包的本质**\n```javascript\nfunction createClosure() {\n    const largeData = new Array(1000000).fill('x') // 大数组\n    \n    return function() {\n        console.log(largeData.length)\n    }\n}\n\nconst closure = createClosure()\n// largeData 不会被回收，因为被闭包引用\nclosure = null // 解除引用后，largeData 才可被回收\n```\n# 闭包\n\n闭包是指有权访问另一个函数作用域中变量的函数\n\n**形成条件**\n1. 存在函数嵌套\n2. 内部函数引用了外部函数作用域中的变量 / 函数\n3. 内部函数在外部函数执行结束后，依然被外部引用\n\n例如：\n```javascript\nfunction createCounter() {\n    let count = 0\n    \n    return function() {\n        count++\n        return count\n    };\n}\n\nconst counter = createCounter()\ncounter() // 1\ncounter() // 2\ncounter() // 3\n```\n`createCounter` 执行完毕后，返回的函数仍能访问 `count` 并记住其状态，这就是闭包\n\n**注意事项**\n\n闭包持有变量不会被回收，如果不及时释放容易造成内存泄漏\n\n作用域链查找有开销，闭包中不要存放大量数据\n\n# 柯里化\n\n柯里化是将多参数函数转换为一系列单参数函数的过程\n\n```javascript\n// 普通函数\nfunction add(a, b, c) {\n    return a + b + c\n}\nadd(1, 2, 3) // 6\n\n// 柯里化\nfunction curriedAdd(a) {\n    return function(b) {\n        return function(c) {\n            return a + b + c\n        }\n    }\n}\ncurriedAdd(1)(2)(3) // 6\ncurriedAdd(1, 2)(3) // 6\ncurriedAdd(1)(2, 3) // 6\n```\n手写柯里化\n```javascript\nfunction curry(fn){\n // 获取原函数需要的参数个数\n  const arity = fn.length\n\n  // 返回柯里化后的函数\n  return function curried(...args){\n    // 如果参数够了，直接执行\n    if(args.length >= arity){\n      return fn.apply(this, args)\n    }\n\n    // 参数不够，继续返回函数收集参数\n    return function(...nextArgs){\n      return curried.apply(this, args.concat(nextArgs))\n    }\n  } \n}\n```\n参数复用：将不常变化的参数预先绑定，生成更简洁的函数\n```javascript\nconst curriedFetch = curry((method, url, data) => {\n  return fetch(url, {method, body: JSON.stringify(data)})\n})\n// 复用POST方法\nconst post = curriedFetch('POST')\npost('/api/user', {name: 'John'})\npost('/api/order', {id: 123})\n```\n延迟执行。例如错误日志\n```javascript\nconst curriedLog = curry((level, time, message) => {\n  console.log(`[${level}] ${time}: ${message}`)\n})\nconst errorLog = curriedLog('ERROR')\n// 等到需要的时候再执行\nerrorLog(Date.now())('参数错误')\n\n```\n# 反柯里化\n\n让一个 “只能被特定对象调用” 的方法，变成一个 “可以接受任何对象作为第一个参数” 的通用函数\n\n```javascript\n// 原始方法\nconst obj = {\n  name: 'John',\n  sayHi(){\n    return 'Hi, ${this.name}'\n  }\n}\nobj.sayHi() // \"Hi, John\"\n\n// 反柯里化后\nconst sayHi = uncurry(obj.sayHi)\nsayHi(obj)\nsayHi({name: 'Jane'}) // \"Hi, Jane\"\n\n// 还可以这样\n[].push.call(obj, 'item')\n// 变成\nuncurrry([].push)(obj, 'item')\n```\n手写反柯里化\n```javascript\n// 主要思路：把 this 变成第一个参数\nfunction uncurry(fn){\n  return function(context, ...args){\n    return fn.call(context, ...args)\n  }\n}\n\n// 使用示例\nconst push = uncurry(Array,prototype.push)\nconst obj = { length: 0}\npush(obj, 1, 2, 3)\nconsole.log(obj) // { 0: 1, 1: 2, 2: 3, length: 3}\n```","status":"PUBLISH","publishTime":"2026-07-26 22:09:29","updatedTime":"2026-07-27 02:35:39","fileIds":null,"tags":[3]}
+2026-07-27 22:20:41.727 [http-nio-8081-exec-23] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=53
+2026-07-27 22:20:41.740 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 135ms
+2026-07-27 22:20:43.262 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:20:43.283 [http-nio-8081-exec-25] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:20:43.287 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:20:43.308 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 21ms
+2026-07-27 22:20:56.741 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:20:56.764 [http-nio-8081-exec-27] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:20:56.766 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:20:56.776 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 10ms
+2026-07-27 22:21:19.546 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/53, 方法: GET
+2026-07-27 22:21:19.567 [http-nio-8081-exec-28] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:19.572 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/53 - ArticleController.getArticleWithTagsById - 参数: 53
+2026-07-27 22:21:19.587 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 13ms
+2026-07-27 22:21:19.690 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:21:19.705 [http-nio-8081-exec-30] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:19.706 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:21:19.710 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 3ms
+2026-07-27 22:21:26.093 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:21:26.114 [http-nio-8081-exec-31] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:26.117 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:21:26.125 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 8ms
+2026-07-27 22:21:29.586 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:21:29.610 [http-nio-8081-exec-32] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:29.613 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:21:29.618 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 5ms
+2026-07-27 22:21:31.003 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/53, 方法: GET
+2026-07-27 22:21:31.028 [http-nio-8081-exec-33] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:31.032 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/53 - ArticleController.getArticleWithTagsById - 参数: 53
+2026-07-27 22:21:31.036 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 4ms
+2026-07-27 22:21:31.114 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:21:31.130 [http-nio-8081-exec-34] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:31.132 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:21:31.133 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 1ms
+2026-07-27 22:21:32.985 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft, 方法: GET
+2026-07-27 22:21:33.006 [http-nio-8081-exec-36] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:33.007 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求开始 - GET /api/article/draft - ArticleController.getDraftByUserId - 参数: 无
+2026-07-27 22:21:33.023 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求成功 - 执行时间: 16ms
+2026-07-27 22:21:35.828 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:21:35.845 [http-nio-8081-exec-37] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:35.847 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:21:35.859 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 12ms
+2026-07-27 22:21:49.450 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/53, 方法: GET
+2026-07-27 22:21:49.463 [http-nio-8081-exec-38] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:49.466 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/53 - ArticleController.getArticleWithTagsById - 参数: 53
+2026-07-27 22:21:49.473 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 6ms
+2026-07-27 22:21:49.522 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:21:49.541 [http-nio-8081-exec-39] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:49.542 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:21:49.548 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 5ms
+2026-07-27 22:21:50.303 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/53, 方法: GET
+2026-07-27 22:21:50.307 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求开始 - GET /api/article/53 - ArticleController.getArticleById - 参数: 53
+2026-07-27 22:21:50.310 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求成功 - 执行时间: 3ms
+2026-07-27 22:21:52.257 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:21:52.275 [http-nio-8081-exec-42] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:52.279 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:21:52.289 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 8ms
+2026-07-27 22:21:53.669 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/53, 方法: GET
+2026-07-27 22:21:53.673 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求开始 - GET /api/article/53 - ArticleController.getArticleById - 参数: 53
+2026-07-27 22:21:53.675 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求成功 - 执行时间: 2ms
+2026-07-27 22:21:57.939 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:21:57.965 [http-nio-8081-exec-44] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:21:57.967 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:21:57.983 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 15ms
+2026-07-27 22:22:23.081 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/53, 方法: GET
+2026-07-27 22:22:23.102 [http-nio-8081-exec-45] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:22:23.104 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/53 - ArticleController.getArticleWithTagsById - 参数: 53
+2026-07-27 22:22:23.109 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 4ms
+2026-07-27 22:22:23.178 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:22:23.208 [http-nio-8081-exec-46] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:22:23.210 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:22:23.212 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 2ms
+2026-07-27 22:23:11.674 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file, 方法: POST
+2026-07-27 22:23:11.706 [http-nio-8081-exec-49] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:23:20.857 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-07-27 22:23:20.874 [http-nio-8081-exec-50] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:23:20.876 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":53,"title":"闭包和柯里化","cover":"https://fishbarn.cn/blog/1/cover/a542f12b-0af9-4295-9e35-aa6de093e719.webp","description":"JavaScript 中闭包与柯里化的核心概念","content":"# 前置基础\n## 作用域\n作用域决定变量的可访问范围：\n- **全局作用域**：整个程序可访问\n- **函数作用域**：仅函数内部可访问\n- **块级作用域**：`let`和`const` 声明的变量，仅 `{}` 内有效\n\n```javascript\nfunction foo() {\n    const localVar = '函数作用域'\n    \n    if (true) {\n        const blockVar = '块级作用域'\n        console.log(blockVar)\n    }\n    console.log(blockVar) // ReferenceError\n}\n```\n## 执行上下文与作用域链\n函数调用时会创建执行上下文（Execution Context），包含三个核心部分：\n- **变量环境**：存储函数内部声明的变量、函数、参数\n- **作用域链**：由当前变量环境 + 父级作用域链组成，用于变量查找\n- **this 指向**：确定 `this` 的绑定\n```javascript\nconst globalVar = '全局'\n\nfunction outer() {\n    const outerVar = '外层'\n    \n    function inner() {\n        const innerVar = '内层'\n        // 作用域链：inner 变量环境 → outer 变量环境 → 全局变量环境\n        console.log(innerVar)  // 自身作用域查找\n        console.log(outerVar)  // 沿作用域链向上查找\n        console.log(globalVar) // 继续向上查找\n    }\n    \n    return inner\n}\n\nconst fn = outer()\nfn()\n```\nJS 引擎沿作用域链从内向外查找变量，找到即停止，找不到则抛出 `ReferenceError`\n## 变量提升\n`var` 声明会提升到作用域顶部，初始化不提升；`let`和`const` 存在暂时性死区（TDZ）：\n```javascript\nconsole.log(a) // undefined\nvar a = 1\n\nconsole.log(b) // ReferenceError\nlet b = 2\n```\n## 垃圾回收\n函数执行完毕后，活动对象（AO）通常会被 GC 回收。但如果活动对象被外部引用，GC 不会回收它——**这是闭包的本质**\n```javascript\nfunction createClosure() {\n    const largeData = new Array(1000000).fill('x') // 大数组\n    \n    return function() {\n        console.log(largeData.length)\n    }\n}\n\nconst closure = createClosure()\n// largeData 不会被回收，因为被闭包引用\nclosure = null // 解除引用后，largeData 才可被回收\n```\n# 闭包\n\n闭包是指有权访问另一个函数作用域中变量的函数\n\n**形成条件**\n1. 存在函数嵌套\n2. 内部函数引用了外部函数作用域中的变量 / 函数\n3. 内部函数在外部函数执行结束后，依然被外部引用\n\n例如：\n```javascript\nfunction createCounter() {\n    let count = 0\n    \n    return function() {\n        count++\n        return count\n    };\n}\n\nconst counter = createCounter()\ncounter() // 1\ncounter() // 2\ncounter() // 3\n```\n`createCounter` 执行完毕后，返回的函数仍能访问 `count` 并记住其状态，这就是闭包\n\n**注意事项**\n\n闭包持有变量不会被回收，如果不及时释放容易造成内存泄漏\n\n作用域链查找有开销，闭包中不要存放大量数据\n\n# 柯里化\n\n柯里化是将多参数函数转换为一系列单参数函数的过程\n\n```javascript\n// 普通函数\nfunction add(a, b, c) {\n    return a + b + c\n}\nadd(1, 2, 3) // 6\n\n// 柯里化\nfunction curriedAdd(a) {\n    return function(b) {\n        return function(c) {\n            return a + b + c\n        }\n    }\n}\ncurriedAdd(1)(2)(3) // 6\ncurriedAdd(1, 2)(3) // 6\ncurriedAdd(1)(2, 3) // 6\n```\n手写柯里化\n```javascript\nfunction curry(fn){\n // 获取原函数需要的参数个数\n  const arity = fn.length\n\n  // 返回柯里化后的函数\n  return function curried(...args){\n    // 如果参数够了，直接执行\n    if(args.length >= arity){\n      return fn.apply(this, args)\n    }\n\n    // 参数不够，继续返回函数收集参数\n    return function(...nextArgs){\n      return curried.apply(this, args.concat(nextArgs))\n    }\n  } \n}\n```\n参数复用：将不常变化的参数预先绑定，生成更简洁的函数\n```javascript\nconst curriedFetch = curry((method, url, data) => {\n  return fetch(url, {method, body: JSON.stringify(data)})\n})\n// 复用POST方法\nconst post = curriedFetch('POST')\npost('/api/user', {name: 'John'})\npost('/api/order', {id: 123})\n```\n延迟执行。例如错误日志\n```javascript\nconst curriedLog = curry((level, time, message) => {\n  console.log(`[${level}] ${time}: ${message}`)\n})\nconst errorLog = curriedLog('ERROR')\n// 等到需要的时候再执行\nerrorLog(Date.now())('参数错误')\n\n```\n# 反柯里化\n\n让一个 “只能被特定对象调用” 的方法，变成一个 “可以接受任何对象作为第一个参数” 的通用函数\n\n```javascript\n// 原始方法\nconst obj = {\n  name: 'John',\n  sayHi(){\n    return 'Hi, ${this.name}'\n  }\n}\nobj.sayHi() // \"Hi, John\"\n\n// 反柯里化后\nconst sayHi = uncurry(obj.sayHi)\nsayHi(obj)\nsayHi({name: 'Jane'}) // \"Hi, Jane\"\n\n// 还可以这样\n[].push.call(obj, 'item')\n// 变成\nuncurrry([].push)(obj, 'item')\n```\n手写反柯里化\n```javascript\n// 主要思路：把 this 变成第一个参数\nfunction uncurry(fn){\n  return function(context, ...args){\n    return fn.call(context, ...args)\n  }\n}\n\n// 使用示例\nconst push = uncurry(Array,prototype.push)\nconst obj = { length: 0}\npush(obj, 1, 2, 3)\nconsole.log(obj) // { 0: 1, 1: 2, 2: 3, length: 3}\n```","status":"PUBLISH","publishTime":"2026-07-27 22:20:42","updatedTime":null,"fileIds":null,"tags":[3]}
+2026-07-27 22:23:20.890 [http-nio-8081-exec-50] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=53
+2026-07-27 22:23:20.893 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 17ms
+2026-07-27 22:23:22.913 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:23:22.927 [http-nio-8081-exec-1] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:23:22.928 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:23:22.934 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 6ms
+2026-07-27 22:23:31.860 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:23:31.869 [http-nio-8081-exec-4] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:23:31.871 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:23:31.889 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 18ms
+2026-07-27 22:24:12.061 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown initiated...
+2026-07-27 22:24:12.063 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown completed.
+2026-07-27 22:24:20.769 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-27 22:24:20.814 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Starting KnockfishBlogBackendApplication using Java 17.0.9 with PID 17976 (E:\fish_blog\knockfish-blog-backend\target\classes started by DELL in E:\fish_blog\knockfish-blog-backend)
+2026-07-27 22:24:20.815 [main] DEBUG com.knockfish.KnockfishBlogBackendApplication - Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-07-27 22:24:20.815 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-27 22:24:22.673 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-07-27 22:24:22.675 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-27 22:24:22.675 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-07-27 22:24:22.742 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-27 22:24:23.419 [main] DEBUG com.knockfish.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-27 22:24:24.819 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-07-27 22:24:24.852 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Started KnockfishBlogBackendApplication in 4.59 seconds (process running for 5.208)
+2026-07-27 22:24:33.208 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-27 22:24:33.251 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:24:33.320 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Starting...
+2026-07-27 22:24:33.553 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - KnockfishHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@ea29552
+2026-07-27 22:24:33.553 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Start completed.
+2026-07-27 22:24:33.646 [http-nio-8081-exec-1] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:24:33.710 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:24:33.803 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 93ms
+2026-07-27 22:24:43.053 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/53, 方法: GET
+2026-07-27 22:24:43.072 [http-nio-8081-exec-3] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:24:43.072 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/53 - ArticleController.getArticleWithTagsById - 参数: 53
+2026-07-27 22:24:43.081 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 3ms
+2026-07-27 22:24:43.170 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:24:43.190 [http-nio-8081-exec-4] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:24:43.192 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:24:43.198 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 6ms
+2026-07-27 22:31:46.821 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:31:46.842 [http-nio-8081-exec-6] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:31:46.847 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:31:46.858 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 11ms
+2026-07-27 22:31:56.348 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/44, 方法: GET
+2026-07-27 22:31:56.350 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求开始 - GET /api/article/44 - ArticleController.getArticleById - 参数: 44
+2026-07-27 22:31:56.351 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求成功 - 执行时间: 0ms
+2026-07-27 22:31:58.709 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:31:58.727 [http-nio-8081-exec-2] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:31:58.732 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:31:58.742 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 10ms
+2026-07-27 22:32:00.006 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/44, 方法: GET
+2026-07-27 22:32:00.027 [http-nio-8081-exec-10] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:32:00.029 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/44 - ArticleController.getArticleWithTagsById - 参数: 44
+2026-07-27 22:32:00.032 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 2ms
+2026-07-27 22:32:00.156 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:32:00.176 [http-nio-8081-exec-28] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:32:00.179 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:32:00.184 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 5ms
+2026-07-27 22:41:46.743 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:41:46.765 [http-nio-8081-exec-13] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:41:46.765 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:41:46.780 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 15ms
+2026-07-27 22:41:49.302 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/52, 方法: GET
+2026-07-27 22:41:49.304 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求开始 - GET /api/article/52 - ArticleController.getArticleById - 参数: 52
+2026-07-27 22:41:49.307 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求成功 - 执行时间: 3ms
+2026-07-27 22:41:56.683 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:41:56.705 [http-nio-8081-exec-15] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:41:56.705 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:41:56.705 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 0ms
+2026-07-27 22:41:59.743 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/39, 方法: GET
+2026-07-27 22:41:59.745 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求开始 - GET /api/article/39 - ArticleController.getArticleById - 参数: 39
+2026-07-27 22:41:59.749 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求成功 - 执行时间: 3ms
+2026-07-27 22:42:04.356 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:42:04.373 [http-nio-8081-exec-20] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:42:04.377 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:42:04.382 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 5ms
+2026-07-27 22:42:06.506 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/33, 方法: GET
+2026-07-27 22:42:06.507 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求开始 - GET /api/article/33 - ArticleController.getArticleById - 参数: 33
+2026-07-27 22:42:06.511 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章详情] 请求成功 - 执行时间: 4ms
+2026-07-27 22:42:09.457 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-27 22:42:09.476 [http-nio-8081-exec-23] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:42:09.478 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-27 22:42:09.493 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 14ms
+2026-07-27 22:43:21.242 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-07-27 22:43:21.257 [http-nio-8081-exec-24] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:43:21.259 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-07-27 22:43:21.262 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 3ms
+2026-07-27 22:43:24.541 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-27 22:43:24.563 [http-nio-8081-exec-25] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:43:24.567 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 30
+2026-07-27 22:43:24.578 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 10ms
+2026-07-27 22:43:39.532 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag, 方法: POST
+2026-07-27 22:43:39.548 [http-nio-8081-exec-12] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-07-27 22:43:39.700 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [新增标签] 请求开始 - POST /api/tag - TagController.createTag - 参数: {"tagName":"性能优化","color":"#f4f4f5"}
+2026-07-27 22:43:39.717 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [新增标签] 请求成功 - 执行时间: 15ms - 返回结果: {"code":200,"msg":"请求成功","data":30}

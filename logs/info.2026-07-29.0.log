@@ -1,0 +1,1259 @@
+2026-07-29 00:02:10.249 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 00:02:10.249 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 00:02:10.423 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 00:02:10.432 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 9ms
+2026-07-29 00:02:10.436 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 00:02:10.440 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 00:02:15.625 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 00:02:15.643 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 00:02:15.646 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 00:02:15.654 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 00:02:15.670 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 00:02:15.674 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 00:04:13.564 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 00:04:13.566 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 00:04:13.592 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 00:04:13.618 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 00:04:13.625 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 7ms
+2026-07-29 00:04:13.720 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 128ms
+2026-07-29 00:04:16.248 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 00:04:16.276 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 00:04:16.279 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 00:04:16.293 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 00:04:16.322 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 00:04:16.330 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 8ms
+2026-07-29 01:04:04.594 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-29 01:04:04.963 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-29 01:04:05.109 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 146ms
+2026-07-29 01:04:20.181 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-29 01:04:20.214 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-29 01:04:20.224 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 10ms
+2026-07-29 01:16:13.239 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-29 01:16:13.287 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-29 01:16:13.307 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 20ms
+2026-07-29 01:16:18.686 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:16:18.688 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:16:18.719 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:16:18.732 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:16:18.739 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 6ms
+2026-07-29 01:16:18.796 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 77ms
+2026-07-29 01:16:23.580 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:16:23.614 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:16:23.622 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 7ms
+2026-07-29 01:16:23.751 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:16:23.789 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:16:23.797 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 8ms
+2026-07-29 01:17:26.351 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:17:26.351 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:17:26.380 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:17:26.383 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:17:26.387 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 01:17:26.402 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 22ms
+2026-07-29 01:17:27.922 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:17:27.944 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:17:27.948 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 01:17:28.026 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:17:28.056 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:17:28.059 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:17:49.381 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:17:49.381 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:17:49.409 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:17:49.410 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:17:49.415 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 6ms
+2026-07-29 01:17:49.626 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 215ms
+2026-07-29 01:17:54.299 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:17:54.325 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:17:54.329 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 01:17:54.417 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:17:54.514 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:17:54.518 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 01:32:43.218 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:32:43.218 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:32:43.261 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:32:43.269 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 7ms
+2026-07-29 01:32:43.274 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:32:43.306 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 31ms
+2026-07-29 01:32:44.742 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:32:44.778 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:32:44.783 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 5ms
+2026-07-29 01:32:44.852 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:32:44.890 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:32:44.896 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 6ms
+2026-07-29 01:47:16.943 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:47:16.943 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:47:16.995 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:47:16.995 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:47:17.003 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 8ms
+2026-07-29 01:47:17.053 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 58ms
+2026-07-29 01:47:17.817 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:47:17.840 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:47:17.843 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:47:17.864 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:47:17.891 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:47:17.895 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 01:47:27.485 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:47:27.486 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:47:27.520 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:47:27.530 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 10ms
+2026-07-29 01:47:27.546 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:47:27.625 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 79ms
+2026-07-29 01:47:28.307 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:47:28.332 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:47:28.334 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 01:47:28.339 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:47:28.367 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:47:28.371 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 01:47:34.045 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:47:34.050 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:47:34.055 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 01:47:34.057 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 01:47:34.133 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 01:47:34.136 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:47:34.140 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 7ms
+2026-07-29 01:47:34.150 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:47:34.154 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 01:47:34.167 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 31ms
+2026-07-29 01:47:34.167 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 01:47:34.175 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 7ms
+2026-07-29 01:47:36.241 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:47:36.242 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 01:47:36.242 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 01:47:36.242 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:47:36.279 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:47:36.279 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 01:47:36.282 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 3ms
+2026-07-29 01:47:36.288 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 01:47:36.289 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:47:36.292 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:47:36.293 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 5ms
+2026-07-29 01:47:36.312 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 33ms
+2026-07-29 01:47:37.276 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:47:37.276 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:47:37.304 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:47:37.306 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:47:37.310 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 4ms
+2026-07-29 01:47:37.324 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 19ms
+2026-07-29 01:47:37.532 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:47:37.556 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:47:37.559 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 01:47:37.563 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:47:37.583 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:47:37.590 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 6ms
+2026-07-29 01:47:40.460 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:47:40.460 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:47:40.480 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:47:40.480 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:47:40.483 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 01:47:40.500 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 20ms
+2026-07-29 01:47:41.262 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:47:41.282 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:47:41.286 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:47:41.302 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:47:41.317 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:47:41.320 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 01:53:57.359 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:53:57.359 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:53:57.388 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:53:57.396 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 7ms
+2026-07-29 01:53:57.401 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:53:57.652 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 250ms
+2026-07-29 01:53:59.192 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:53:59.207 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:53:59.211 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 01:53:59.275 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:53:59.301 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:53:59.304 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 01:54:02.603 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:54:02.603 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:54:02.647 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:54:02.661 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:54:02.667 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 6ms
+2026-07-29 01:54:02.708 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 61ms
+2026-07-29 01:54:02.986 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:54:03.017 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:54:03.022 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 01:54:03.059 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:54:03.088 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:54:03.092 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 01:54:04.488 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:54:04.488 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:54:04.525 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:54:04.552 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:54:04.558 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 6ms
+2026-07-29 01:54:04.586 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 61ms
+2026-07-29 01:54:04.839 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:54:04.874 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:54:04.877 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:54:04.929 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:54:04.960 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:54:04.966 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 6ms
+2026-07-29 01:54:06.185 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:54:06.185 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:54:06.300 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:54:06.304 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:54:06.306 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 01:54:06.325 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 25ms
+2026-07-29 01:54:06.584 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:54:06.605 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:54:06.608 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 01:54:06.642 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:54:06.667 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:54:06.672 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 5ms
+2026-07-29 01:54:08.664 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:54:08.665 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:54:08.680 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:54:08.680 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:54:08.682 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 01:54:08.701 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 21ms
+2026-07-29 01:54:08.973 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:54:08.995 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:54:08.999 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:54:09.018 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:54:09.035 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:54:09.038 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 01:54:14.503 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:54:14.503 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:54:14.516 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:54:14.516 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:54:14.518 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 01:54:14.562 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 46ms
+2026-07-29 01:54:14.822 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:54:14.845 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:54:14.847 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 01:54:14.867 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:54:14.888 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:54:14.893 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 5ms
+2026-07-29 01:56:39.209 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:56:39.210 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:56:39.225 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:56:39.225 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:56:39.227 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 01:56:39.239 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 14ms
+2026-07-29 01:56:43.156 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:56:43.168 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:56:43.170 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 01:56:43.176 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:56:43.188 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:56:43.191 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 01:57:14.231 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:57:14.230 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:57:14.251 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:57:14.270 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:57:14.271 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 20ms
+2026-07-29 01:57:14.274 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 4ms
+2026-07-29 01:57:14.506 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:57:14.522 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:57:14.525 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:57:14.538 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:57:14.556 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:57:14.558 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 01:57:15.711 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:57:15.711 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:57:15.725 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:57:15.726 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:57:15.728 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 01:57:15.758 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 32ms
+2026-07-29 01:57:15.979 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:57:16.004 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:57:16.008 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 01:57:16.024 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:57:16.041 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:57:16.043 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 01:57:19.021 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:57:19.021 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:57:19.048 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:57:19.050 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:57:19.051 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 01:57:19.069 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 19ms
+2026-07-29 01:57:19.285 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:57:19.303 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:57:19.306 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 01:57:19.321 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:57:19.339 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:57:19.343 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 01:57:38.733 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:57:38.733 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:57:38.752 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:57:38.789 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:57:38.792 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 01:57:38.804 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 51ms
+2026-07-29 01:57:39.105 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:57:39.125 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:57:39.131 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 6ms
+2026-07-29 01:57:39.214 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:57:39.232 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:57:39.236 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 01:57:41.598 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:57:41.598 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:57:41.608 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:57:41.610 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 01:57:41.611 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:57:41.636 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 25ms
+2026-07-29 01:57:41.884 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:57:41.900 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:57:41.902 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 01:57:41.918 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:57:41.933 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:57:41.936 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 01:58:47.899 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 01:58:47.906 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 01:58:47.913 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 01:58:47.920 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 01:58:47.922 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 01:58:47.929 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 16ms
+2026-07-29 01:58:51.150 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 01:58:51.158 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 01:58:51.160 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 01:58:51.175 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 01:58:51.183 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 01:58:51.186 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 02:00:00.309 [scheduling-1] INFO  com.knockfish.scheduler.FileCleanupScheduler - ========== 文件资源定时清理任务开始 ==========
+2026-07-29 02:00:00.313 [scheduling-1] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - ========== 文件资源清理任务开始 ==========
+2026-07-29 02:00:00.422 [scheduling-1] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 未发现需要清理的孤立文件，任务结束
+2026-07-29 02:00:00.422 [scheduling-1] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - ========== 文件资源清理任务结束 ==========
+2026-07-29 02:05:00.868 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:05:00.870 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:05:00.880 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:05:00.885 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:05:00.887 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:05:00.934 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 54ms
+2026-07-29 02:05:01.879 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:05:01.893 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:05:01.895 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:05:01.918 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:05:01.927 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:05:01.929 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:08:10.388 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:08:10.388 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:08:10.417 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:08:10.417 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:08:10.419 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:08:10.447 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 30ms
+2026-07-29 02:08:11.297 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:08:11.308 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:08:11.313 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 02:08:11.353 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:08:11.362 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:08:11.366 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 02:08:37.308 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:08:37.308 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:08:37.325 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:08:37.325 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:08:37.327 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:08:37.355 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 30ms
+2026-07-29 02:08:39.570 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:08:39.585 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:08:39.589 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 02:08:39.612 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:08:39.630 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:08:39.637 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 5ms
+2026-07-29 02:08:41.009 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:08:41.009 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:08:41.022 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:08:41.023 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:08:41.026 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:08:41.045 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 22ms
+2026-07-29 02:08:41.783 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:08:41.793 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:08:41.798 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 5ms
+2026-07-29 02:08:41.821 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:08:41.832 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:08:41.834 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:09:25.415 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:09:25.444 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:09:25.447 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:09:25.450 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 5ms
+2026-07-29 02:09:25.493 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:09:25.521 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:09:25.543 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:09:25.550 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 7ms
+2026-07-29 02:09:25.557 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:09:25.584 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:09:25.596 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 12ms
+2026-07-29 02:09:25.845 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 352ms
+2026-07-29 02:09:28.249 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:09:28.250 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:09:28.270 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:09:28.270 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:09:28.272 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:09:28.288 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 18ms
+2026-07-29 02:09:29.189 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:09:29.201 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:09:29.206 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 5ms
+2026-07-29 02:09:29.228 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:09:29.241 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:09:29.243 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:15:30.810 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:15:30.810 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:15:30.833 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:15:30.849 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 16ms
+2026-07-29 02:15:30.849 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:15:30.854 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 5ms
+2026-07-29 02:15:32.240 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:15:32.259 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:15:32.262 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 02:15:32.371 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:15:32.390 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:15:32.392 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:15:36.259 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:15:36.260 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:15:36.296 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:15:36.299 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 02:15:36.309 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:15:36.328 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 18ms
+2026-07-29 02:15:37.223 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:15:37.240 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:15:37.242 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:15:37.262 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:15:37.278 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:15:37.279 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:15:49.135 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:15:49.139 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:15:49.164 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:15:49.167 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:15:49.169 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:15:49.295 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 131ms
+2026-07-29 02:15:49.468 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:15:49.494 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:15:49.497 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:15:49.501 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:15:49.529 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:15:49.533 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 02:15:54.962 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:15:54.983 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:15:54.987 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 4ms
+2026-07-29 02:16:33.394 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:16:33.394 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:16:33.430 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:16:33.442 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:16:33.445 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 02:16:33.697 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 267ms
+2026-07-29 02:16:34.705 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:16:34.733 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:16:34.739 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 6ms
+2026-07-29 02:16:34.757 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:16:34.781 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:16:34.785 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 02:16:36.594 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:16:36.594 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:16:36.614 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:16:36.617 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 02:16:36.621 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:16:36.655 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 34ms
+2026-07-29 02:16:37.613 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:16:37.651 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:16:37.656 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 02:16:37.676 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:16:37.695 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:16:37.701 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 6ms
+2026-07-29 02:16:41.226 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:16:41.231 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:16:41.238 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:16:41.245 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:16:41.248 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:16:41.259 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 21ms
+2026-07-29 02:16:41.590 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:16:41.604 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:16:41.606 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:16:41.636 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:16:41.652 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:16:41.654 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:16:44.277 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:16:44.276 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:16:44.297 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:16:44.297 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:16:44.299 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:16:44.317 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 20ms
+2026-07-29 02:16:44.560 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:16:44.579 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:16:44.583 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 02:16:44.602 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:16:44.616 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:16:44.619 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 02:17:14.940 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:17:14.940 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:17:14.954 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:17:14.984 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:17:14.987 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:17:14.991 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 37ms
+2026-07-29 02:17:15.989 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:17:16.007 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:17:16.009 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:17:16.035 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:17:16.055 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:17:16.059 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 02:17:17.651 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:17:17.651 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:17:17.663 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:17:17.664 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:17:17.667 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 4ms
+2026-07-29 02:17:17.704 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 40ms
+2026-07-29 02:17:18.076 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:17:18.102 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:17:18.106 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 02:17:18.140 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:17:18.158 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:17:18.160 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:20:13.208 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:20:13.208 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:20:13.219 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:20:13.219 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:20:13.220 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:20:13.228 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 9ms
+2026-07-29 02:20:13.691 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:20:13.704 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:20:13.705 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:20:13.719 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:20:13.727 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:20:13.731 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 02:22:37.928 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:22:37.928 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:22:37.939 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:22:37.939 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:22:37.940 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:22:37.947 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 8ms
+2026-07-29 02:22:38.521 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:22:38.528 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:22:38.529 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:22:38.543 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:22:38.553 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:22:38.555 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:24:13.849 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:24:13.849 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:24:13.854 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:24:13.854 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:24:13.855 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:24:13.860 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 6ms
+2026-07-29 02:24:13.868 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:24:13.874 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:24:13.875 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:24:13.881 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:24:13.887 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:24:13.888 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:27:01.501 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:27:01.502 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:27:01.515 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:27:01.516 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:27:01.517 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:27:01.530 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 14ms
+2026-07-29 02:27:02.054 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:27:02.065 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:27:02.067 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:27:02.093 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:27:02.105 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:27:02.109 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 02:27:33.905 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:27:33.905 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:27:33.915 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:27:33.915 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:27:33.917 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:27:33.930 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 15ms
+2026-07-29 02:27:34.470 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:27:34.482 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:27:34.483 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:27:34.498 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:27:34.504 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:27:34.506 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:27:36.817 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:27:36.817 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:27:36.829 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:27:36.830 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 0ms
+2026-07-29 02:27:36.834 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:27:36.842 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 8ms
+2026-07-29 02:27:36.949 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:27:36.955 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:27:36.956 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:27:36.968 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:27:36.978 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:27:36.980 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:28:39.146 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:28:39.146 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:28:39.155 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:28:39.156 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:28:39.156 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 0ms
+2026-07-29 02:28:39.165 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 10ms
+2026-07-29 02:28:39.644 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:28:39.651 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:28:39.654 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:28:39.661 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:28:39.673 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:28:39.675 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:28:41.555 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 02:28:41.823 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 02:28:41.837 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 02:28:41.841 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 4ms
+2026-07-29 02:28:48.144 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 02:28:48.258 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 02:28:48.270 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 02:28:48.272 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 2ms
+2026-07-29 02:30:24.246 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/auth/login, 方法: POST
+2026-07-29 02:30:24.258 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [用户登录] 请求开始 - POST /api/auth/login - AuthController.login - 参数: {"username":"knockfish","password":"3414338"}
+2026-07-29 02:30:24.352 [http-nio-8081-exec-49] INFO  com.knockfish.service.impl.AuthServiceImpl - 用户登录成功: username=knockfish, userId=1
+2026-07-29 02:30:24.352 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [用户登录] 请求成功 - 执行时间: 94ms - 返回结果: {"code":200,"msg":"请求成功","data":{"userId":1,"username":"knockfish","email":"knockfish@qq.com","nickname":"knock_fish","avatar":"https://fishbarn.cn/blog/article-image/2026-06/168954af-15b9-4268-9743-080e1b495538.webp","description":"博客正在施工中……","githubUrl":null,"bilibiliUrl":null,"background":"","createTime":"2026-04-15 14:23:26","roles":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoia25vY2tmaXNoIiwiZXhwIjoxNzg1NjIzNDI0LCJpYXQiOjE3ODUyNjM0MjR9.9_cX8KsjyO84tRwd3YiqWK-39-caY_H2TP5QZWXPXNI"}}
+2026-07-29 02:30:24.362 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/permission/user/1, 方法: GET
+2026-07-29 02:30:24.881 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:30:24.884 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:30:24.890 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:30:24.892 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:30:24.896 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 4ms
+2026-07-29 02:30:24.911 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 21ms
+2026-07-29 02:30:26.879 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:30:26.887 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:30:26.888 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:30:26.917 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:30:26.934 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:30:26.935 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:30:30.399 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file/prefix, 方法: GET
+2026-07-29 02:34:20.737 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file/prefix, 方法: GET
+2026-07-29 02:35:09.962 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:09.963 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:09.971 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:09.973 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:09.974 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:09.986 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 15ms
+2026-07-29 02:35:10.486 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:10.494 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:10.496 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:10.519 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:10.524 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:10.530 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 6ms
+2026-07-29 02:35:11.320 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:11.330 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:11.330 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:11.334 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:11.337 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:11.345 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 11ms
+2026-07-29 02:35:11.346 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:11.349 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 3ms
+2026-07-29 02:35:11.351 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:11.352 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:11.353 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:11.354 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:13.016 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:13.016 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:13.024 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:13.026 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:13.028 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:13.041 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 17ms
+2026-07-29 02:35:13.086 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:13.092 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:13.093 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:13.096 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:13.102 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:13.103 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:15.150 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:15.150 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:15.150 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:15.151 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:15.159 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:15.159 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:15.159 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:15.162 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:15.163 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 4ms
+2026-07-29 02:35:15.163 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 02:35:15.164 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:15.177 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 18ms
+2026-07-29 02:35:16.620 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:16.620 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:16.620 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:16.620 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:16.639 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:16.639 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:16.639 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:16.641 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:16.641 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:16.642 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:16.642 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 3ms
+2026-07-29 02:35:16.648 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 9ms
+2026-07-29 02:35:17.945 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:17.945 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:17.952 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:17.952 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:17.955 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 02:35:17.966 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 14ms
+2026-07-29 02:35:18.007 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:18.015 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:18.017 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:18.027 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:18.033 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:18.035 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:18.864 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:18.864 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:18.873 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:18.873 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:18.874 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:18.882 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 9ms
+2026-07-29 02:35:19.417 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:19.430 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:19.431 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:19.442 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:19.448 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:19.449 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:20.537 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:20.537 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:20.537 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:20.538 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:20.546 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:20.546 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:20.546 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:20.546 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:20.547 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:20.547 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:20.547 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:20.559 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 13ms
+2026-07-29 02:35:29.048 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:29.048 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:29.048 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:29.048 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:29.056 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:29.056 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:29.056 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:29.056 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:29.057 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:29.057 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:29.057 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:29.066 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 10ms
+2026-07-29 02:35:32.051 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:32.051 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:32.065 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:32.065 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:32.067 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:32.078 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 13ms
+2026-07-29 02:35:32.122 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:32.134 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:32.135 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:32.141 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:32.153 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:32.155 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:33.833 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:33.833 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:33.833 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:33.834 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:33.845 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:33.845 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:33.845 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:33.845 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:33.846 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:33.846 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:33.847 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:33.858 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 13ms
+2026-07-29 02:35:34.608 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:34.608 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:34.617 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:34.617 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:34.619 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:34.631 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 14ms
+2026-07-29 02:35:34.669 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:34.681 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:34.682 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:34.684 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:34.692 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:34.695 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 3ms
+2026-07-29 02:35:35.782 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:35.782 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:35.793 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:35.793 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:35.794 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:35.800 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 7ms
+2026-07-29 02:35:36.300 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:36.308 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:36.310 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:36.318 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:36.329 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:36.330 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:36.999 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:36.999 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:37.000 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:37.000 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:37.012 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:37.012 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:37.012 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:37.012 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:37.013 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:37.013 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:37.013 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:37.025 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 13ms
+2026-07-29 02:35:38.190 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:38.190 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:38.191 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:38.191 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:38.198 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:38.198 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:38.198 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:38.198 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:38.199 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:38.199 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:38.199 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:38.210 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 12ms
+2026-07-29 02:35:39.223 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:39.224 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:35:39.224 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:35:39.225 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:39.242 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:39.242 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:35:39.242 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:35:39.243 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:39.244 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:39.244 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:39.245 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:39.250 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 8ms
+2026-07-29 02:35:41.527 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:41.527 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:41.538 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:41.538 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:41.541 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 02:35:41.549 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 11ms
+2026-07-29 02:35:41.580 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:41.587 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:41.588 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:41.591 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:41.601 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:41.603 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:35:43.970 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:35:43.970 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:35:43.978 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:35:43.978 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:35:43.981 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 3ms
+2026-07-29 02:35:43.992 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 14ms
+2026-07-29 02:35:44.554 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:35:44.560 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:35:44.561 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:35:44.575 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:35:44.585 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:35:44.587 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:38:52.703 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:38:52.704 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:38:52.710 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:38:52.710 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:38:52.711 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 1ms
+2026-07-29 02:38:52.719 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 9ms
+2026-07-29 02:38:53.227 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:38:53.234 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:38:53.235 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:38:53.246 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:38:53.252 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:38:53.253 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 1ms
+2026-07-29 02:48:43.014 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:48:43.015 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 02:48:43.022 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:48:43.022 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 02:48:43.024 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 02:48:43.035 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 13ms
+2026-07-29 02:48:43.764 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:48:43.779 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:48:43.781 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 02:48:43.813 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 02:48:43.825 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 02:48:43.827 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 2ms
+2026-07-29 02:48:48.324 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 02:48:48.324 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 02:48:48.326 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 02:48:48.326 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 02:48:48.338 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 02:48:48.338 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 02:48:48.339 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 1ms
+2026-07-29 02:48:48.342 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 02:48:48.343 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 02:48:48.343 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 1ms
+2026-07-29 02:48:48.345 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 2ms
+2026-07-29 02:48:48.348 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 10ms
+2026-07-29 02:48:53.314 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 02:48:53.430 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 02:48:53.438 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 02:48:53.440 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 2ms
+2026-07-29 02:48:55.187 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/link/page, 方法: GET
+2026-07-29 02:48:55.201 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求开始 - GET /api/link/page - LinkController.getLinkListVO - 参数: {"linkName":null}, 1, 10
+2026-07-29 02:48:55.213 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求成功 - 执行时间: 12ms
+2026-07-29 02:48:59.980 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/note, 方法: GET
+2026-07-29 02:48:59.988 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取笔记列表] 请求开始 - GET /api/note - NoteController.getNoteList - 参数: {"noteTitle":null}, 1, 10
+2026-07-29 02:49:00.033 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取笔记列表] 请求成功 - 执行时间: 45ms
+2026-07-29 02:49:03.427 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/link/page, 方法: GET
+2026-07-29 02:49:03.437 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求开始 - GET /api/link/page - LinkController.getLinkListVO - 参数: {"linkName":null}, 1, 10
+2026-07-29 02:49:03.445 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求成功 - 执行时间: 8ms
+2026-07-29 02:49:04.680 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 02:49:04.693 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 02:49:04.708 [http-nio-8081-exec-13] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 14ms
+2026-07-29 02:49:09.109 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 02:49:09.115 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 02:49:09.118 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 3ms
+2026-07-29 02:51:00.152 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 02:51:00.159 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 02:51:00.166 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 7ms
+2026-07-29 03:13:30.099 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 03:13:30.120 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 03:13:30.127 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 6ms
+2026-07-29 03:24:08.717 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown initiated...
+2026-07-29 03:24:08.720 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown completed.
+2026-07-29 14:22:58.585 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-29 14:22:58.706 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Starting KnockfishBlogBackendApplication using Java 17.0.9 with PID 15292 (E:\fish_blog\knockfish-blog-backend\target\classes started by DELL in E:\fish_blog\knockfish-blog-backend)
+2026-07-29 14:22:58.707 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-29 14:23:02.082 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-07-29 14:23:02.085 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-29 14:23:02.086 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-07-29 14:23:02.180 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-29 14:23:05.714 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-07-29 14:23:05.767 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Started KnockfishBlogBackendApplication in 8.371 seconds (process running for 10.01)
+2026-07-29 14:35:50.840 [http-nio-8081-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-29 14:35:50.982 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 14:35:50.982 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 14:35:50.982 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 14:35:50.983 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 14:35:51.265 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Starting...
+2026-07-29 14:35:51.885 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - KnockfishHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@51ea5962
+2026-07-29 14:35:51.889 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Start completed.
+2026-07-29 14:35:52.508 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 14:35:52.508 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 14:35:52.565 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 53ms
+2026-07-29 14:35:52.587 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 14:35:52.592 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 14:35:52.607 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 4ms
+2026-07-29 14:35:52.613 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 24ms
+2026-07-29 14:35:52.740 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 227ms
+2026-07-29 14:36:03.363 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 14:36:03.363 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 14:36:03.363 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 14:36:03.362 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 14:36:03.388 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 14:36:03.391 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 14:36:03.392 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 14:36:03.397 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 9ms
+2026-07-29 14:36:03.397 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 14:36:03.417 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 18ms
+2026-07-29 14:36:03.419 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 24ms
+2026-07-29 14:36:03.488 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 92ms
+2026-07-29 14:36:05.792 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 14:36:05.797 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 14:36:05.814 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 14:36:05.820 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 14:36:05.826 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 4ms
+2026-07-29 14:36:05.846 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 31ms
+2026-07-29 14:36:05.936 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 14:36:05.960 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 14:36:05.963 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 3ms
+2026-07-29 14:36:06.010 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 14:36:06.037 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 14:36:06.044 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 6ms
+2026-07-29 14:36:16.482 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 14:36:16.483 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 14:36:16.501 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 14:36:16.502 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 14:36:16.504 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 2ms
+2026-07-29 14:36:16.889 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 387ms
+2026-07-29 14:36:21.906 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 14:36:21.930 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 14:36:21.934 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 4ms
+2026-07-29 14:36:21.972 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 14:36:21.998 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 14:36:22.005 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 7ms
+2026-07-29 14:36:36.277 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 14:36:36.315 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 14:36:36.822 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 506ms
+2026-07-29 14:37:56.051 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 14:37:56.065 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 14:37:56.071 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 6ms
+2026-07-29 15:44:52.809 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 15:44:53.197 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 15:44:53.262 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 63ms
+2026-07-29 16:13:43.679 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 16:13:43.759 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 16:13:43.814 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 53ms
+2026-07-29 16:16:35.269 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 16:16:35.277 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 16:16:35.541 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 16:16:35.562 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 16:16:35.582 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 20ms
+2026-07-29 16:16:35.643 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 102ms
+2026-07-29 16:16:41.328 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 16:16:41.393 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 16:16:41.410 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 17ms
+2026-07-29 16:16:41.441 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 16:16:41.489 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 16:16:41.506 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 16ms
+2026-07-29 16:16:43.774 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 16:16:43.808 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 16:16:43.822 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 13ms
+2026-07-29 16:43:00.783 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 16:43:00.864 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 16:43:00.896 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 32ms
+2026-07-29 16:55:42.067 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 16:55:42.093 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 16:55:42.105 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 12ms
+2026-07-29 16:55:48.918 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 16:55:48.936 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 16:55:48.952 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 16ms
+2026-07-29 17:02:14.103 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:02:14.118 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:02:14.128 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 10ms
+2026-07-29 17:02:16.684 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file/prefix, 方法: GET
+2026-07-29 17:05:45.668 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file/prefix, 方法: GET
+2026-07-29 17:09:19.023 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-29 17:09:19.051 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-29 17:09:19.089 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 38ms
+2026-07-29 17:10:35.825 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:10:35.845 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:10:35.855 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 10ms
+2026-07-29 17:29:18.174 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:29:18.197 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:29:18.207 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 10ms
+2026-07-29 17:30:21.646 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:30:21.670 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:30:21.677 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 7ms
+2026-07-29 17:30:43.240 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:30:43.261 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:30:43.271 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 10ms
+2026-07-29 17:32:06.307 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:32:06.322 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:32:06.326 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 4ms
+2026-07-29 17:32:27.777 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:32:27.799 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:32:27.806 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 7ms
+2026-07-29 17:33:12.111 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:33:12.129 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:33:12.134 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:33:18.342 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:33:18.357 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:33:18.362 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:34:18.282 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 17:34:18.531 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 17:34:18.570 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 17:34:18.580 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 10ms
+2026-07-29 17:36:26.934 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:36:26.972 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:36:26.984 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 12ms
+2026-07-29 17:36:40.337 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:36:40.352 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 2, 10
+2026-07-29 17:36:40.358 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:37:35.961 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:37:35.979 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:37:35.984 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:41:36.763 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:36.785 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:41:36.795 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 10ms
+2026-07-29 17:41:44.778 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:44.794 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:41:44.800 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 6ms
+2026-07-29 17:41:49.995 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:50.038 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:41:50.043 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:41:52.931 [http-nio-8081-exec-40] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:52.947 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:41:52.953 [http-nio-8081-exec-40] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 6ms
+2026-07-29 17:41:55.621 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:55.638 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 3, 10
+2026-07-29 17:41:55.642 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 4ms
+2026-07-29 17:41:56.717 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:56.734 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 3, 10
+2026-07-29 17:41:56.739 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:41:58.072 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:41:58.089 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 3, 10
+2026-07-29 17:41:58.094 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 17:42:11.943 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:42:11.955 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 3, 10
+2026-07-29 17:42:11.961 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 1ms
+2026-07-29 17:42:15.444 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 17:42:15.457 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 17:42:15.458 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 1ms
+2026-07-29 18:04:44.349 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 18:04:44.366 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 18:04:44.374 [http-nio-8081-exec-50] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 8ms
+2026-07-29 18:05:09.647 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/auth/login, 方法: POST
+2026-07-29 18:05:09.733 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [用户登录] 请求开始 - POST /api/auth/login - AuthController.login - 参数: {"username":"knockfish","password":"3414338"}
+2026-07-29 18:05:09.849 [http-nio-8081-exec-48] INFO  com.knockfish.service.impl.AuthServiceImpl - 用户登录成功: username=knockfish, userId=1
+2026-07-29 18:05:09.850 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [用户登录] 请求成功 - 执行时间: 116ms - 返回结果: {"code":200,"msg":"请求成功","data":{"userId":1,"username":"knockfish","email":"knockfish@qq.com","nickname":"knock_fish","avatar":"https://fishbarn.cn/blog/article-image/2026-06/168954af-15b9-4268-9743-080e1b495538.webp","description":"博客正在施工中……","githubUrl":null,"bilibiliUrl":null,"background":"","createTime":"2026-04-15 14:23:26","roles":null,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoia25vY2tmaXNoIiwiZXhwIjoxNzg1Njc5NTA5LCJpYXQiOjE3ODUzMTk1MDl9.MpuLF71q4Xw5GVnfXAnk_vBoFGteE8XeE467JTchbrs"}}
+2026-07-29 18:05:09.861 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/permission/user/1, 方法: GET
+2026-07-29 18:05:10.454 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 18:05:10.457 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 18:05:10.465 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 18:05:10.476 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 18:05:10.481 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 5ms
+2026-07-29 18:05:10.498 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 33ms
+2026-07-29 18:05:12.137 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 18:05:12.146 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 18:05:12.150 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 4ms
+2026-07-29 18:05:12.166 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 18:05:12.178 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 18:05:12.184 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 6ms
+2026-07-29 18:05:13.819 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 18:05:13.828 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 18:05:13.833 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 18:06:51.891 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 18:06:51.900 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 18:06:51.906 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 6ms
+2026-07-29 20:48:06.884 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 20:48:07.096 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 20:48:07.146 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 50ms
+2026-07-29 21:02:45.809 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 21:02:45.864 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 21:02:45.884 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 20ms
+2026-07-29 21:08:53.436 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 21:08:53.468 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 21:08:53.474 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 5ms
+2026-07-29 21:16:25.467 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 21:16:25.468 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 21:16:25.529 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 21:16:25.542 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 21:16:25.550 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 21ms
+2026-07-29 21:16:25.657 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 114ms
+2026-07-29 21:16:27.114 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 21:16:27.114 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 21:16:27.147 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 21:16:27.147 [http-nio-8081-exec-28] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 0ms
+2026-07-29 21:16:27.147 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 21:16:27.187 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 40ms
+2026-07-29 21:16:27.348 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 21:16:27.371 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 21:16:27.378 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 6ms
+2026-07-29 21:16:27.384 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 21:16:27.431 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 21:16:27.443 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 12ms
+2026-07-29 21:16:29.370 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 21:16:29.386 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 21:16:29.401 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 15ms
+2026-07-29 22:25:51.585 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 22:25:51.735 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 22:25:51.769 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 34ms
+2026-07-29 22:25:53.389 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 22:25:53.497 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 22:25:53.633 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 136ms
+2026-07-29 22:25:54.637 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 22:25:54.800 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 22:25:54.819 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 22:25:54.820 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 1ms
+2026-07-29 22:55:39.049 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 22:55:39.093 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 22:55:39.109 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 16ms
+2026-07-29 22:56:08.992 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 22:56:09.017 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 22:56:09.017 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 0ms
+2026-07-29 22:56:10.179 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 22:56:10.200 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 22:56:10.203 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 3ms
+2026-07-29 22:56:10.891 [http-nio-8081-exec-50] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 22:56:10.983 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 22:56:10.995 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 22:56:10.997 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 2ms
+2026-07-29 22:56:13.426 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file/prefix, 方法: GET
+2026-07-29 22:56:15.047 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/all, 方法: GET
+2026-07-29 22:56:15.055 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求开始 - GET /api/file-reference/all - FileReferenceController.selectAllNoPage - 参数: 无
+2026-07-29 22:56:15.056 [http-nio-8081-exec-3] INFO  com.knockfish.controller.FileReferenceController - 查询所有文件引用
+2026-07-29 22:56:15.136 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求成功 - 执行时间: 81ms
+2026-07-29 22:56:15.153 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/referenced-paths, 方法: GET
+2026-07-29 22:56:15.154 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求开始 - GET /api/file-reference/referenced-paths - FileReferenceController.selectAllReferencedPaths - 参数: 无
+2026-07-29 22:56:15.154 [http-nio-8081-exec-7] INFO  com.knockfish.controller.FileReferenceController - 查询所有被引用的文件路径
+2026-07-29 22:56:15.155 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求成功 - 执行时间: 1ms
+2026-07-29 22:56:32.005 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/role/with-permission, 方法: GET
+2026-07-29 22:57:04.266 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/role/with-permission, 方法: GET
+2026-07-29 22:57:11.579 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/role/with-permission, 方法: GET
+2026-07-29 22:57:17.678 [http-nio-8081-exec-13] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/permission, 方法: GET
+2026-07-29 22:57:19.996 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/user/page, 方法: GET
+2026-07-29 22:57:20.030 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询用户列表] 请求开始 - GET /api/user/page - UserController.getUserList - 参数: {"username":null,"nickname":null,"email":null}, 1, 10
+2026-07-29 22:57:20.058 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [查询用户列表] 请求成功 - 执行时间: 28ms
+2026-07-29 22:57:57.583 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/role/with-permission, 方法: GET
+2026-07-29 22:57:57.654 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/user/3/roles, 方法: GET
+2026-07-29 22:58:10.460 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/user/page, 方法: GET
+2026-07-29 22:58:10.460 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询用户列表] 请求开始 - GET /api/user/page - UserController.getUserList - 参数: {"username":null,"nickname":null,"email":null}, 1, 10
+2026-07-29 22:58:10.476 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询用户列表] 请求成功 - 执行时间: 16ms
+2026-07-29 23:10:56.440 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/role/with-permission, 方法: GET
+2026-07-29 23:10:56.524 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/user/3/roles, 方法: GET
+2026-07-29 23:11:38.881 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 23:11:38.904 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 23:11:38.919 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 15ms
+2026-07-29 23:13:28.951 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 23:13:29.051 [http-nio-8081-exec-29] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 23:13:29.073 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 23:13:29.076 [http-nio-8081-exec-29] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 3ms
+2026-07-29 23:15:00.420 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 23:15:00.615 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 23:15:00.634 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 23:15:00.637 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 3ms
+2026-07-29 23:15:05.173 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/note, 方法: GET
+2026-07-29 23:15:05.178 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取笔记列表] 请求开始 - GET /api/note - NoteController.getNoteList - 参数: {"noteTitle":null}, 1, 10
+2026-07-29 23:15:05.299 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [获取笔记列表] 请求成功 - 执行时间: 121ms
+2026-07-29 23:15:09.210 [http-nio-8081-exec-37] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/code-category, 方法: GET
+2026-07-29 23:15:09.228 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [查询代码分类列表] 请求开始 - GET /api/code-category - CodeCategoryController.getCodeCategoryList - 参数: {"codeCategoryName":null}, 1, 10
+2026-07-29 23:15:09.275 [http-nio-8081-exec-37] INFO  com.knockfish.aspect.LogAspect - [查询代码分类列表] 请求成功 - 执行时间: 47ms
+2026-07-29 23:15:52.078 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/code-category, 方法: GET
+2026-07-29 23:15:52.104 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [查询代码分类列表] 请求开始 - GET /api/code-category - CodeCategoryController.getCodeCategoryList - 参数: {"codeCategoryName":null}, 1, 10
+2026-07-29 23:15:52.111 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [查询代码分类列表] 请求成功 - 执行时间: 7ms
+2026-07-29 23:16:11.830 [http-nio-8081-exec-38] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/code-category, 方法: GET
+2026-07-29 23:16:11.834 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [查询代码分类列表] 请求开始 - GET /api/code-category - CodeCategoryController.getCodeCategoryList - 参数: {"codeCategoryName":null}, 1, 10
+2026-07-29 23:16:11.851 [http-nio-8081-exec-38] INFO  com.knockfish.aspect.LogAspect - [查询代码分类列表] 请求成功 - 执行时间: 17ms
+2026-07-29 23:17:49.958 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 23:17:49.971 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 23:17:49.980 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 9ms
+2026-07-29 23:18:30.593 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 23:18:30.677 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 23:18:30.699 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 23:18:30.702 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 3ms
+2026-07-29 23:50:29.380 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 23:50:29.511 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 23:50:29.527 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 23:50:29.529 [http-nio-8081-exec-49] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 2ms
+2026-07-29 23:50:43.023 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 23:50:43.036 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 23:50:43.047 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 11ms
+2026-07-29 23:50:46.015 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 23:50:46.087 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 23:50:46.104 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 23:50:46.113 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 9ms
+2026-07-29 23:50:49.453 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/link/page, 方法: GET
+2026-07-29 23:50:49.456 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求开始 - GET /api/link/page - LinkController.getLinkListVO - 参数: {"linkName":null}, 1, 10
+2026-07-29 23:50:49.517 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求成功 - 执行时间: 46ms
+2026-07-29 23:50:50.225 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/tag/page, 方法: GET
+2026-07-29 23:50:50.236 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求开始 - GET /api/tag/page - TagController.getTagListVO - 参数: {"tagName":null}, 1, 10
+2026-07-29 23:50:50.236 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [查询标签列表] 请求成功 - 执行时间: 0ms
+2026-07-29 23:50:51.397 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-29 23:50:51.401 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-29 23:50:51.433 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 32ms
+2026-07-29 23:50:55.238 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file/prefix, 方法: GET
+2026-07-29 23:50:56.037 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/all, 方法: GET
+2026-07-29 23:50:56.038 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求开始 - GET /api/file-reference/all - FileReferenceController.selectAllNoPage - 参数: 无
+2026-07-29 23:50:56.038 [http-nio-8081-exec-11] INFO  com.knockfish.controller.FileReferenceController - 查询所有文件引用
+2026-07-29 23:50:56.047 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求成功 - 执行时间: 9ms
+2026-07-29 23:50:56.078 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/referenced-paths, 方法: GET
+2026-07-29 23:50:56.082 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求开始 - GET /api/file-reference/referenced-paths - FileReferenceController.selectAllReferencedPaths - 参数: 无
+2026-07-29 23:50:56.082 [http-nio-8081-exec-12] INFO  com.knockfish.controller.FileReferenceController - 查询所有被引用的文件路径
+2026-07-29 23:50:56.082 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求成功 - 执行时间: 0ms
+2026-07-29 23:50:57.254 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/link/page, 方法: GET
+2026-07-29 23:50:57.273 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求开始 - GET /api/link/page - LinkController.getLinkListVO - 参数: {"linkName":null}, 1, 10
+2026-07-29 23:50:57.273 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [查询友链列表] 请求成功 - 执行时间: 0ms
+2026-07-29 23:50:58.479 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 23:50:58.490 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 23:50:58.495 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 0ms
+2026-07-29 23:50:59.202 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/site/with-category, 方法: GET
+2026-07-29 23:50:59.261 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/options, 方法: GET
+2026-07-29 23:50:59.275 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求开始 - GET /api/category/options - CategoryController.getCategoryOption - 参数: 无
+2026-07-29 23:50:59.276 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [获取分类选项] 请求成功 - 执行时间: 0ms
+2026-07-29 23:51:00.882 [http-nio-8081-exec-18] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-07-29 23:51:00.895 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-07-29 23:51:00.909 [http-nio-8081-exec-18] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 0ms
+2026-07-29 23:51:01.848 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 23:51:01.858 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 23:51:01.859 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 1ms
+2026-07-29 23:51:04.540 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 23:51:04.571 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-07-29 23:51:04.586 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 23:51:04.593 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-07-29 23:51:04.605 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 19ms
+2026-07-29 23:51:04.605 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 12ms
+2026-07-29 23:51:06.280 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 23:51:06.293 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 23:51:06.300 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 7ms
+2026-07-29 23:51:06.315 [http-nio-8081-exec-25] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-07-29 23:51:06.331 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-07-29 23:51:06.331 [http-nio-8081-exec-25] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 0ms
+2026-07-29 23:51:06.983 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-07-29 23:51:06.985 [http-nio-8081-exec-30] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-07-29 23:51:06.987 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/latest-articles, 方法: GET
+2026-07-29 23:51:06.986 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/tag-cloud, 方法: GET
+2026-07-29 23:51:06.995 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-07-29 23:51:06.999 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-07-29 23:51:06.999 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求开始 - GET /api/dashboard/latest-articles - DashboardController.getLatestArticles - 参数: 10
+2026-07-29 23:51:07.001 [http-nio-8081-exec-30] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 2ms
+2026-07-29 23:51:07.002 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [获取最近文章] 请求成功 - 执行时间: 3ms
+2026-07-29 23:51:07.002 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求开始 - GET /api/dashboard/tag-cloud - DashboardController.getTagCloud - 参数: 无
+2026-07-29 23:51:07.002 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 7ms
+2026-07-29 23:51:07.006 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取标签云] 请求成功 - 执行时间: 4ms
+2026-07-29 23:51:08.112 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/category/with-site-count, 方法: GET
+2026-07-29 23:51:08.121 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求开始 - GET /api/category/with-site-count - CategoryController.getCategoryWithSiteCountList - 参数: {"categoryName":null}, 1, 10
+2026-07-29 23:51:08.124 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询分类列表(含统计)] 请求成功 - 执行时间: 3ms

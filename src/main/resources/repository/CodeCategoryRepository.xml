@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.CodeCategoryRepository">
+    <select id="selectList" resultType="CodeCategoryVO">
+        select code_category_id, code_category_name, sort, create_time
+        from code_category
+        <where>
+            <if test="codeCategoryName != null">code_category_name like concat('%', #{codeCategoryName}, '%')</if>
+        </where>
+        order by sort, code_category_id
+    </select>
+
+    <select id="selectMenuList" resultType="CodeCategoryMenuVO">
+        select code_category_id, code_category_name, sort
+        from code_category
+        order by sort, code_category_id
+    </select>
+
+    <select id="selectById" resultType="CodeCategory">
+        select code_category_id, code_category_name, sort, create_time
+        from code_category
+        where code_category_id = #{codeCategoryId}
+    </select>
+
+    <insert id="insert" parameterType="CodeCategory">
+        insert into code_category (code_category_name, sort, create_time)
+        values (#{codeCategoryName}, #{sort}, #{createTime})
+    </insert>
+
+    <update id="updateById">
+        update code_category
+        set code_category_name = #{codeCategoryName}, sort = #{sort}
+        where code_category_id = #{codeCategoryId}
+    </update>
+
+    <delete id="deleteById">
+        delete from code_category where code_category_id = #{codeCategoryId}
+    </delete>
+</mapper>

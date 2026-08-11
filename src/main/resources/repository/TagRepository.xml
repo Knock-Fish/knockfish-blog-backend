@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.TagRepository">
+    <!-- TagVO 的 resultMap -->
+    <resultMap id="TagVOMap" type="TagVO">
+        <id property="tagId" column="tag_id" />
+        <result property="tagName" column="tag_name" />
+        <result property="color" column="color" />
+    </resultMap>
+    <!-- ArticleVO 的 resultMap -->
+    <resultMap id="ArticleVOMap" type="ArticleVO">
+        <id property="articleId" column="article_id"/>
+        <result property="title" column="title"/>
+        <result property="cover" column="cover"/>
+        <result property="description" column="description"/>
+        <result property="content" column="content"/>
+        <result property="status" column="status"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="updatedTime" column="updated_time"/>
+    </resultMap>
+    <resultMap id="TagWithArticleListVOMap" type="TagWithArticleListVO">
+        <association property="tag" javaType="TagVO" resultMap="TagVOMap" />
+        <collection property="articles" ofType="ArticleVO" resultMap="ArticleVOMap" />
+    </resultMap>
+    <select id="selectTagWithArticles" resultType="TagWithArticleListVO">
+        select
+        t.tag_id, t.tag_name, t.color,
+        a.article_id, a.title, a.description
+        from
+        tag t
+        left join
+        article_tag at on t.tag_id = at.tag_id
+        left join
+        article a on at.article_id = a.article_id
+        where
+        t.tag_id = #{tagId}
+        order by create_time desc
+    </select>
+    <select id="selectArticlesByTagId" resultMap="ArticleVOMap">
+        select
+        a.article_id, a.title, a.description, a.publish_time
+        from
+        article_tag at
+        inner join
+        article a on at.article_id = a.article_id
+        where
+        at.tag_id = #{tagId}
+        and a.status = 'PUBLISH'
+        order by a.publish_time desc
+    </select>
+    <!--  查询所有标签 -->
+    <select id="selectAll" resultType="Tag">
+        select * from `tag`
+        <where>
+            <if test="tagName != null">tag_name like concat('%', #{tagName}, '%')</if>
+        </where>
+        order by create_time desc
+    </select>
+    <!--  查询标签及关联的文章的数量  -->
+    <select id="selectTagWithArticleCount" resultType="TagWithArticleCountVO">
+        SELECT
+        t.tag_id,
+        t.tag_name,
+        COUNT(at.article_id) AS article_count
+        FROM tag t
+        INNER JOIN article_tag at ON t.tag_id = at.tag_id
+        GROUP BY t.tag_id, t.tag_name
+        ORDER BY article_count DESC
+    </select>
+    <!--  插入标签  -->
+    <insert id="insert" parameterType="Tag" useGeneratedKeys="true" keyProperty="tagId" keyColumn="tagId">
+        insert into `tag` (tag_id, tag_name, color, create_time) values (#{tagId}, #{tagName}, #{color}, #{createTime})
+    </insert>
+    <!--  更新标签  -->
+    <update id="updateById">
+        update `tag` set tag_name = #{tagName}, color = #{color}  where tag_id = #{tagId}
+    </update>
+    <!--  删除标签  -->
+    <delete id="deleteById">
+        delete from `tag` where tag_id = #{tagId}
+    </delete>
+    <!--  统计标签总数  -->
+    <select id="selectTagCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM tag
+    </select>
+
+    <!-- Agent: 获取全部标签列表（不分页） -->
+    <select id="selectAllNoPage" resultType="Tag">
+        select tag_id, tag_name, color, create_time
+        from `tag`
+        order by create_time desc
+    </select>
+</mapper>

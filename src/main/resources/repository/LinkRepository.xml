@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.LinkRepository">
+    <!--  查询所有友链 -->
+    <select id="selectAll" resultType="Link">
+        select * from `link`
+        <where>
+            <if test="linkName != null">link_name like concat('%', #{linkName}, '%')</if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <!--  查询友链列表（前端展示用） -->
+    <select id="selectAllForFront" resultType="Link">
+        select * from `link`
+        where status = 'DISPLAY'
+        order by create_time desc
+    </select>
+    <!--  插入友链  -->
+    <insert id="insert" parameterType="Link" useGeneratedKeys="true" keyProperty="linkId" keyColumn="linkId">
+        insert into `link` (link_name, link_url, avatar, description, status, create_time)
+        values (#{linkName}, #{linkUrl}, #{avatar}, #{description}, #{status}, #{createTime})
+    </insert>
+    <!--  更新友链  -->
+    <update id="updateById">
+        update `link` set link_name = #{linkName}, link_url = #{linkUrl}, avatar = #{avatar},
+        description = #{description}, status = #{status}
+        where link_id = #{linkId}
+    </update>
+    <!--  删除友链  -->
+    <delete id="deleteById">
+        delete from `link` where link_id = #{linkId}
+    </delete>
+
+    <!-- Agent: 统计友链总数 -->
+    <select id="selectLinkCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM link
+    </select>
+</mapper>

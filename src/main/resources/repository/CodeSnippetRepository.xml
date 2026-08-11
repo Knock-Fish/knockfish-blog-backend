@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.CodeSnippetRepository">
+    <select id="selectListByCategoryId" resultType="CodeSnippetVO">
+        select code_snippet_id, code_category_id, title, code_content, create_time
+        from code_snippet
+        <where>
+            <if test="codeCategoryId != '' and codeCategoryId != 0">
+                code_category_id = #{codeCategoryId}
+            </if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <select id="selectById" resultType="CodeSnippet">
+        select code_snippet_id, code_category_id, title, code_content, create_time
+        from code_snippet
+        where code_snippet_id = #{codeSnippetId}
+    </select>
+
+    <insert id="insert" parameterType="CodeSnippet">
+        insert into code_snippet (code_category_id, title, code_content, create_time)
+        values (#{codeCategoryId}, #{title}, #{codeContent}, #{createTime})
+    </insert>
+
+    <update id="updateById">
+        update code_snippet
+        set code_category_id = #{codeCategoryId}, title = #{title}, code_content = #{codeContent}
+        where code_snippet_id = #{codeSnippetId}
+    </update>
+
+    <delete id="deleteById">
+        delete from code_snippet where code_snippet_id = #{codeSnippetId}
+    </delete>
+
+    <delete id="deleteByCategoryId">
+        delete from code_snippet where code_category_id = #{codeCategoryId}
+    </delete>
+    <!--  统计代码片段总数  -->
+    <select id="selectCodeSnippetCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM code_snippet
+    </select>
+
+    <!-- Agent: 关键词搜索代码片段（标题/代码内容模糊匹配） -->
+    <select id="selectByKeyword" resultType="CodeSnippetVO">
+        select code_snippet_id, code_category_id, title, code_content, create_time
+        from code_snippet
+        where title like concat('%', #{keyword}, '%')
+           or code_content like concat('%', #{keyword}, '%')
+        order by create_time desc
+    </select>
+</mapper>

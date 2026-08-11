@@ -1,0 +1,18 @@
+2026-07-26 01:31:57.029 [http-nio-8081-exec-23] ERROR com.knockfish.security.JwtAuthenticationFilter - Token 验证异常：The Token has expired on 2026-07-22T14:00:46Z.，请求路径：/api/dashboard/category-stats
+2026-07-26 01:31:57.029 [http-nio-8081-exec-32] ERROR com.knockfish.security.JwtAuthenticationFilter - Token 验证异常：The Token has expired on 2026-07-22T14:00:46Z.，请求路径：/api/dashboard/article-trend
+2026-07-26 01:31:57.029 [http-nio-8081-exec-27] ERROR com.knockfish.security.JwtAuthenticationFilter - Token 验证异常：The Token has expired on 2026-07-22T14:00:46Z.，请求路径：/api/dashboard/activities
+2026-07-26 01:31:57.029 [http-nio-8081-exec-3] ERROR com.knockfish.security.JwtAuthenticationFilter - Token 验证异常：The Token has expired on 2026-07-22T14:00:46Z.，请求路径：/api/dashboard/overview
+2026-07-31 13:09:16.047 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+

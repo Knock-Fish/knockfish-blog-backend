@@ -1,0 +1,228 @@
+2026-08-04 18:42:32.288 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-08-04 18:42:32.379 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Starting KnockfishBlogBackendApplication using Java 17.0.9 with PID 4156 (E:\fish_blog\knockfish-blog-backend\target\classes started by DELL in E:\fish_blog\knockfish-blog-backend)
+2026-08-04 18:42:32.381 [main] DEBUG com.knockfish.KnockfishBlogBackendApplication - Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-08-04 18:42:32.382 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 18:42:34.938 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-04 18:42:34.940 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-04 18:42:34.941 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-08-04 18:42:35.017 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-04 18:42:35.953 [main] DEBUG com.knockfish.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-08-04 18:42:38.175 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-04 18:42:38.216 [main] INFO  com.knockfish.KnockfishBlogBackendApplication - Started KnockfishBlogBackendApplication in 6.884 seconds (process running for 8.075)
+2026-08-04 18:43:15.123 [http-nio-8081-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-04 18:43:15.250 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/overview, 方法: GET
+2026-08-04 18:43:15.250 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/activities, 方法: GET
+2026-08-04 18:43:15.411 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Starting...
+2026-08-04 18:43:15.935 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - KnockfishHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@767ccc52
+2026-08-04 18:43:15.939 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Start completed.
+2026-08-04 18:43:16.147 [http-nio-8081-exec-3] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:16.147 [http-nio-8081-exec-4] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:16.191 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求开始 - GET /api/dashboard/overview - DashboardController.getOverview - 参数: 无
+2026-08-04 18:43:16.211 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求开始 - GET /api/dashboard/activities - DashboardController.getActivities - 参数: 10
+2026-08-04 18:43:16.226 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [获取最近动态] 请求成功 - 执行时间: 14ms
+2026-08-04 18:43:16.273 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [获取仪表盘概览] 请求成功 - 执行时间: 81ms
+2026-08-04 18:43:16.993 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/category-stats, 方法: GET
+2026-08-04 18:43:17.020 [http-nio-8081-exec-6] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:17.022 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求开始 - GET /api/dashboard/category-stats - DashboardController.getCategoryStats - 参数: 无
+2026-08-04 18:43:17.031 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取文章分类统计] 请求成功 - 执行时间: 9ms
+2026-08-04 18:43:17.070 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/dashboard/article-trend, 方法: GET
+2026-08-04 18:43:17.101 [http-nio-8081-exec-8] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:17.109 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求开始 - GET /api/dashboard/article-trend - DashboardController.getArticleTrend - 参数: "monthly", null
+2026-08-04 18:43:17.115 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章发布趋势] 请求成功 - 执行时间: 6ms
+2026-08-04 18:43:27.264 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:43:27.313 [http-nio-8081-exec-10] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:27.351 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-08-04 18:43:27.553 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 202ms
+2026-08-04 18:43:33.993 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:43:34.016 [http-nio-8081-exec-12] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:34.021 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 2, 10
+2026-08-04 18:43:34.031 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 9ms
+2026-08-04 18:43:36.839 [http-nio-8081-exec-14] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/36, 方法: GET
+2026-08-04 18:43:36.850 [http-nio-8081-exec-14] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:36.853 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/36 - ArticleController.getArticleWithTagsById - 参数: 36
+2026-08-04 18:43:36.872 [http-nio-8081-exec-14] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 19ms
+2026-08-04 18:43:37.150 [http-nio-8081-exec-11] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:43:37.167 [http-nio-8081-exec-11] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:43:37.168 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:43:37.173 [http-nio-8081-exec-11] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 5ms
+2026-08-04 18:43:49.326 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file, 方法: POST
+2026-08-04 18:43:49.340 [http-nio-8081-exec-19] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:44:58.457 [http-nio-8081-exec-22] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/unbindUnused/36, 方法: POST
+2026-08-04 18:44:58.488 [http-nio-8081-exec-22] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:44:58.489 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求开始 - POST /api/article/unbindUnused/36 - ArticleController.unbindUnusedFiles - 参数: 36
+2026-08-04 18:44:58.532 [http-nio-8081-exec-22] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 批量解绑完成，共解绑 2 条文件引用记录
+2026-08-04 18:44:58.532 [http-nio-8081-exec-22] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章未使用图片解绑完成: articleId=36, 解绑数量=2
+2026-08-04 18:44:58.539 [http-nio-8081-exec-22] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求成功 - 执行时间: 49ms
+2026-08-04 18:44:58.588 [http-nio-8081-exec-23] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:44:58.610 [http-nio-8081-exec-23] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:44:58.613 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-08-04 18:44:58.674 [http-nio-8081-exec-23] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 61ms
+2026-08-04 18:44:59.879 [http-nio-8081-exec-24] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:44:59.895 [http-nio-8081-exec-24] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:44:59.896 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 2, 10
+2026-08-04 18:44:59.906 [http-nio-8081-exec-24] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 10ms
+2026-08-04 18:47:03.382 [http-nio-8081-exec-27] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/36, 方法: GET
+2026-08-04 18:47:03.397 [http-nio-8081-exec-27] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:47:03.399 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/36 - ArticleController.getArticleWithTagsById - 参数: 36
+2026-08-04 18:47:03.405 [http-nio-8081-exec-27] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 6ms
+2026-08-04 18:47:03.490 [http-nio-8081-exec-26] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:47:03.512 [http-nio-8081-exec-26] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:47:03.513 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:47:03.514 [http-nio-8081-exec-26] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 1ms
+2026-08-04 18:47:17.267 [http-nio-8081-exec-28] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file, 方法: POST
+2026-08-04 18:47:17.277 [http-nio-8081-exec-28] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:48:25.459 [http-nio-8081-exec-31] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-08-04 18:48:25.479 [http-nio-8081-exec-31] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:48:25.530 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":36,"title":"节流和防抖","cover":"https://fishbarn.cn/blog/article-image/2026-06/2b575cd3-ec52-4697-8265-2478d8b65b71.webp","description":"前端性能优化中，防抖和节流是两种手段，主要用于控制函数的执行频率","content":"# 防抖\n**什么是防抖**\n\n就是指连续触发事件但是在设定的一段时间内**只执行最后一次**\n例如`settimeout`定时器设定在1000 毫秒后执行，当触发一次事件，定时器会在 1000 毫秒后执行，但如果在1000毫秒之前又触发了事件，那定时器就会重新开始1000毫秒之后执行\n\n**防抖的应用场景**\n\n在需要限制频繁触发事件的情况，例如搜索框输入、文本编辑器实时保存，避免每次输入时都去请求返回数据。同样还有轮播图频繁触发切换也可以使用防抖限制\n\n**防抖实现**\n\n利用定时器，每次触发先清除以前的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onkeyup = function(){\n    // 防抖，如果当前定时器存在则清除定时器\n    if(timer !== null){\n        clearTimeout(timer)\n    }\n    // 创建新的定时器，设置1000毫秒后执行\n    timer = setTimeout(()=>{\n        console.log('事件执行')\n    }, 1000)\n}\n```\n# 节流\n**什么是节流**\n\n就是指高频触发事件但是在设定的一段时间内只执行一次函数\n例如`settimeout`定时器设定在1000 毫秒后执行，在1000毫秒触发再多次事件，也只会在1000毫秒后执行最开始的一次\n节流的应用场景\n在高频事件中，例如鼠标快速点击，鼠标滑动、resize事件、scroll事件等\n\n**节流的实现**\n\n同样利用定时器，等定时器执行完毕后，才开启新的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onmouseover = function(){\n    // 节流，定时器如果存在直接返回\n    if(timer !== null){\n        return\n    }\n    timer = setTimeout(()=>{\n        console.log(\"事件执行\")\n        timer = null\n    }, 1000)\n}\n```\n# lodash库防抖和节流\nLodash是一个JavaScript工具库，提供了大量实用的函数来处理常见的编程任务。可以通过使用Lodash库中提供的防抖和节流函数来有效地控制事件的触发次数\n\n**_.debounce 防抖**\n\nlodash 中的 debounce 函数可以用于对一个函数在执行时添加延时，这样可以确保该函数不会被频繁调用，从而提升网页性能。具体来说，debounce 函数返回一个新的函数，该函数会在最后一次调用之后指定的时间内执行\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.debounce(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给button添加点击事件，在监听器的回调函数传入 _.debounce 函数，该函数会在最后一次调用之后等待 1000 毫秒在执行，这样就实现了防抖的效果\n\n**_.throttle节流**\n\nlodash 中的 throttle 函数可以用于对一个函数进行节流，即在一定时间内最多只能执行一次该函数。这样可以避免函数被频繁调用而影响页面性能。具体来说，throttle 函数返回一个新的函数，该函数会在每个指定时间间隔内最多执行一次原函数\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.throttle(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给 button 添加点击事件，在监听器的回调函数传入 _.throttle 函数，该函数会在每个指定时间间隔内最多执行一次原函数，这样就实现了节流的效果\n\n![](https://fishbarn.cn/blog/1/article/31165a3a-4b20-4ca3-b28c-f314eb5a4a61.webp)\n\n","status":"DRAFT","publishTime":"2026-06-10 22:08:36","updatedTime":"2026-08-04 14:10:00","fileIds":null,"tags":[3,16]}
+2026-08-04 18:48:25.558 [http-nio-8081-exec-31] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=36
+2026-08-04 18:48:25.563 [http-nio-8081-exec-31] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 31ms
+2026-08-04 18:48:25.572 [http-nio-8081-exec-32] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:48:25.585 [http-nio-8081-exec-32] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:48:25.585 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:48:25.590 [http-nio-8081-exec-32] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 4ms
+2026-08-04 18:48:31.449 [http-nio-8081-exec-34] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/unbindUnused/36, 方法: POST
+2026-08-04 18:48:31.465 [http-nio-8081-exec-34] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:48:31.469 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求开始 - POST /api/article/unbindUnused/36 - ArticleController.unbindUnusedFiles - 参数: 36
+2026-08-04 18:48:31.476 [http-nio-8081-exec-34] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章无未使用图片需解绑: articleId=36
+2026-08-04 18:48:31.477 [http-nio-8081-exec-34] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求成功 - 执行时间: 8ms
+2026-08-04 18:48:31.514 [http-nio-8081-exec-33] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:48:31.525 [http-nio-8081-exec-33] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:48:31.526 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-08-04 18:48:31.532 [http-nio-8081-exec-33] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 6ms
+2026-08-04 18:48:32.906 [http-nio-8081-exec-36] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:48:32.918 [http-nio-8081-exec-36] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:48:32.921 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 2, 10
+2026-08-04 18:48:32.926 [http-nio-8081-exec-36] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 4ms
+2026-08-04 18:49:49.241 [http-nio-8081-exec-35] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:49:49.263 [http-nio-8081-exec-35] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:49:49.264 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:49:49.267 [http-nio-8081-exec-35] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 2ms
+2026-08-04 18:49:50.322 [http-nio-8081-exec-39] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft, 方法: GET
+2026-08-04 18:49:50.332 [http-nio-8081-exec-39] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:49:50.333 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求开始 - GET /api/article/draft - ArticleController.getDraftByUserId - 参数: 无
+2026-08-04 18:49:50.347 [http-nio-8081-exec-39] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求成功 - 执行时间: 14ms
+2026-08-04 18:49:53.533 [http-nio-8081-exec-41] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/66, 方法: DELETE
+2026-08-04 18:49:53.547 [http-nio-8081-exec-41] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:49:53.548 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [删除文章] 请求开始 - DELETE /api/article/66 - ArticleController.deleteArticle - 参数: 66
+2026-08-04 18:49:53.562 [http-nio-8081-exec-41] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章删除成功: articleId=66, title=
+2026-08-04 18:49:53.567 [http-nio-8081-exec-41] INFO  com.knockfish.aspect.LogAspect - [删除文章] 请求成功 - 执行时间: 19ms
+2026-08-04 18:49:53.582 [http-nio-8081-exec-42] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft, 方法: GET
+2026-08-04 18:49:53.595 [http-nio-8081-exec-42] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:49:53.596 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求开始 - GET /api/article/draft - ArticleController.getDraftByUserId - 参数: 无
+2026-08-04 18:49:53.603 [http-nio-8081-exec-42] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求成功 - 执行时间: 7ms
+2026-08-04 18:49:54.286 [http-nio-8081-exec-43] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/36, 方法: GET
+2026-08-04 18:49:54.297 [http-nio-8081-exec-43] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:49:54.299 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/36 - ArticleController.getArticleWithTagsById - 参数: 36
+2026-08-04 18:49:54.307 [http-nio-8081-exec-43] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 7ms
+2026-08-04 18:50:09.055 [http-nio-8081-exec-44] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-08-04 18:50:09.077 [http-nio-8081-exec-44] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:50:09.081 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":36,"title":"节流和防抖","cover":"https://fishbarn.cn/blog/article-image/2026-06/2b575cd3-ec52-4697-8265-2478d8b65b71.webp","description":"前端性能优化中，防抖和节流是两种手段，主要用于控制函数的执行频率","content":"# 防抖\n**什么是防抖**\n\n就是指连续触发事件但是在设定的一段时间内**只执行最后一次**\n例如`settimeout`定时器设定在1000 毫秒后执行，当触发一次事件，定时器会在 1000 毫秒后执行，但如果在1000毫秒之前又触发了事件，那定时器就会重新开始1000毫秒之后执行\n\n**防抖的应用场景**\n\n在需要限制频繁触发事件的情况，例如搜索框输入、文本编辑器实时保存，避免每次输入时都去请求返回数据。同样还有轮播图频繁触发切换也可以使用防抖限制\n\n**防抖实现**\n\n利用定时器，每次触发先清除以前的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onkeyup = function(){\n    // 防抖，如果当前定时器存在则清除定时器\n    if(timer !== null){\n        clearTimeout(timer)\n    }\n    // 创建新的定时器，设置1000毫秒后执行\n    timer = setTimeout(()=>{\n        console.log('事件执行')\n    }, 1000)\n}\n```\n# 节流\n**什么是节流**\n\n就是指高频触发事件但是在设定的一段时间内只执行一次函数\n例如`settimeout`定时器设定在1000 毫秒后执行，在1000毫秒触发再多次事件，也只会在1000毫秒后执行最开始的一次\n节流的应用场景\n在高频事件中，例如鼠标快速点击，鼠标滑动、resize事件、scroll事件等\n\n**节流的实现**\n\n同样利用定时器，等定时器执行完毕后，才开启新的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onmouseover = function(){\n    // 节流，定时器如果存在直接返回\n    if(timer !== null){\n        return\n    }\n    timer = setTimeout(()=>{\n        console.log(\"事件执行\")\n        timer = null\n    }, 1000)\n}\n```\n# lodash库防抖和节流\nLodash是一个JavaScript工具库，提供了大量实用的函数来处理常见的编程任务。可以通过使用Lodash库中提供的防抖和节流函数来有效地控制事件的触发次数\n\n**_.debounce 防抖**\n\nlodash 中的 debounce 函数可以用于对一个函数在执行时添加延时，这样可以确保该函数不会被频繁调用，从而提升网页性能。具体来说，debounce 函数返回一个新的函数，该函数会在最后一次调用之后指定的时间内执行\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.debounce(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给button添加点击事件，在监听器的回调函数传入 _.debounce 函数，该函数会在最后一次调用之后等待 1000 毫秒在执行，这样就实现了防抖的效果\n\n**_.throttle节流**\n\nlodash 中的 throttle 函数可以用于对一个函数进行节流，即在一定时间内最多只能执行一次该函数。这样可以避免函数被频繁调用而影响页面性能。具体来说，throttle 函数返回一个新的函数，该函数会在每个指定时间间隔内最多执行一次原函数\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.throttle(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给 button 添加点击事件，在监听器的回调函数传入 _.throttle 函数，该函数会在每个指定时间间隔内最多执行一次原函数，这样就实现了节流的效果\n\n\n","status":"PUBLISH","publishTime":"2026-06-10 22:08:36","updatedTime":"2026-08-04 18:48:26","fileIds":null,"tags":[3,16]}
+2026-08-04 18:50:09.100 [http-nio-8081-exec-44] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=36
+2026-08-04 18:50:09.105 [http-nio-8081-exec-44] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 23ms
+2026-08-04 18:50:33.127 [http-nio-8081-exec-45] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/unbindUnused/36, 方法: POST
+2026-08-04 18:50:33.140 [http-nio-8081-exec-45] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:50:33.141 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求开始 - POST /api/article/unbindUnused/36 - ArticleController.unbindUnusedFiles - 参数: 36
+2026-08-04 18:50:33.149 [http-nio-8081-exec-45] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 批量解绑完成，共解绑 1 条文件引用记录
+2026-08-04 18:50:33.150 [http-nio-8081-exec-45] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章未使用图片解绑完成: articleId=36, 解绑数量=1
+2026-08-04 18:50:33.153 [http-nio-8081-exec-45] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求成功 - 执行时间: 12ms
+2026-08-04 18:50:33.216 [http-nio-8081-exec-46] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:50:33.231 [http-nio-8081-exec-46] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:50:33.233 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-08-04 18:50:33.243 [http-nio-8081-exec-46] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 9ms
+2026-08-04 18:50:41.035 [http-nio-8081-exec-47] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/36, 方法: GET
+2026-08-04 18:50:41.065 [http-nio-8081-exec-47] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:50:41.067 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/36 - ArticleController.getArticleWithTagsById - 参数: 36
+2026-08-04 18:50:41.073 [http-nio-8081-exec-47] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 6ms
+2026-08-04 18:50:41.170 [http-nio-8081-exec-48] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:50:41.198 [http-nio-8081-exec-48] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:50:41.200 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:50:41.204 [http-nio-8081-exec-48] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 4ms
+2026-08-04 18:50:52.898 [http-nio-8081-exec-49] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/r2-file, 方法: POST
+2026-08-04 18:50:52.910 [http-nio-8081-exec-49] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:33.043 [http-nio-8081-exec-2] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-08-04 18:52:33.061 [http-nio-8081-exec-2] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:33.067 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":36,"title":"节流和防抖","cover":"https://fishbarn.cn/blog/article-image/2026-06/2b575cd3-ec52-4697-8265-2478d8b65b71.webp","description":"前端性能优化中，防抖和节流是两种手段，主要用于控制函数的执行频率","content":"# 防抖\n**什么是防抖**\n\n就是指连续触发事件但是在设定的一段时间内**只执行最后一次**\n例如`settimeout`定时器设定在1000 毫秒后执行，当触发一次事件，定时器会在 1000 毫秒后执行，但如果在1000毫秒之前又触发了事件，那定时器就会重新开始1000毫秒之后执行\n\n**防抖的应用场景**\n\n在需要限制频繁触发事件的情况，例如搜索框输入、文本编辑器实时保存，避免每次输入时都去请求返回数据。同样还有轮播图频繁触发切换也可以使用防抖限制\n\n**防抖实现**\n\n利用定时器，每次触发先清除以前的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onkeyup = function(){\n    // 防抖，如果当前定时器存在则清除定时器\n    if(timer !== null){\n        clearTimeout(timer)\n    }\n    // 创建新的定时器，设置1000毫秒后执行\n    timer = setTimeout(()=>{\n        console.log('事件执行')\n    }, 1000)\n}\n```\n# 节流\n**什么是节流**\n\n就是指高频触发事件但是在设定的一段时间内只执行一次函数\n例如`settimeout`定时器设定在1000 毫秒后执行，在1000毫秒触发再多次事件，也只会在1000毫秒后执行最开始的一次\n节流的应用场景\n在高频事件中，例如鼠标快速点击，鼠标滑动、resize事件、scroll事件等\n\n**节流的实现**\n\n同样利用定时器，等定时器执行完毕后，才开启新的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onmouseover = function(){\n    // 节流，定时器如果存在直接返回\n    if(timer !== null){\n        return\n    }\n    timer = setTimeout(()=>{\n        console.log(\"事件执行\")\n        timer = null\n    }, 1000)\n}\n```\n# lodash库防抖和节流\nLodash是一个JavaScript工具库，提供了大量实用的函数来处理常见的编程任务。可以通过使用Lodash库中提供的防抖和节流函数来有效地控制事件的触发次数\n\n**_.debounce 防抖**\n\nlodash 中的 debounce 函数可以用于对一个函数在执行时添加延时，这样可以确保该函数不会被频繁调用，从而提升网页性能。具体来说，debounce 函数返回一个新的函数，该函数会在最后一次调用之后指定的时间内执行\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.debounce(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给button添加点击事件，在监听器的回调函数传入 _.debounce 函数，该函数会在最后一次调用之后等待 1000 毫秒在执行，这样就实现了防抖的效果\n\n**_.throttle节流**\n\nlodash 中的 throttle 函数可以用于对一个函数进行节流，即在一定时间内最多只能执行一次该函数。这样可以避免函数被频繁调用而影响页面性能。具体来说，throttle 函数返回一个新的函数，该函数会在每个指定时间间隔内最多执行一次原函数\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.throttle(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给 button 添加点击事件，在监听器的回调函数传入 _.throttle 函数，该函数会在每个指定时间间隔内最多执行一次原函数，这样就实现了节流的效果\n![](https://fishbarn.cn/blog/1/article/ff419bcd-4162-4f0b-805e-46e7a3ea5c21.webp)\n\n\n","status":"DRAFT","publishTime":"2026-08-04 18:50:09","updatedTime":null,"fileIds":null,"tags":[3,16]}
+2026-08-04 18:52:33.082 [http-nio-8081-exec-2] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=36
+2026-08-04 18:52:33.088 [http-nio-8081-exec-2] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 21ms
+2026-08-04 18:52:33.098 [http-nio-8081-exec-1] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:52:33.115 [http-nio-8081-exec-1] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:33.116 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:52:33.118 [http-nio-8081-exec-1] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 2ms
+2026-08-04 18:52:37.093 [http-nio-8081-exec-4] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/unbindUnused/36, 方法: POST
+2026-08-04 18:52:37.108 [http-nio-8081-exec-4] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:37.109 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求开始 - POST /api/article/unbindUnused/36 - ArticleController.unbindUnusedFiles - 参数: 36
+2026-08-04 18:52:37.118 [http-nio-8081-exec-4] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章无未使用图片需解绑: articleId=36
+2026-08-04 18:52:37.118 [http-nio-8081-exec-4] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求成功 - 执行时间: 8ms
+2026-08-04 18:52:37.161 [http-nio-8081-exec-3] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:52:37.175 [http-nio-8081-exec-3] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:37.178 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-08-04 18:52:37.188 [http-nio-8081-exec-3] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 10ms
+2026-08-04 18:52:38.762 [http-nio-8081-exec-5] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:52:38.779 [http-nio-8081-exec-5] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:38.780 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 2, 10
+2026-08-04 18:52:38.792 [http-nio-8081-exec-5] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 12ms
+2026-08-04 18:52:46.597 [http-nio-8081-exec-6] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:52:46.612 [http-nio-8081-exec-6] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:46.613 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:52:46.615 [http-nio-8081-exec-6] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 2ms
+2026-08-04 18:52:47.544 [http-nio-8081-exec-7] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft, 方法: GET
+2026-08-04 18:52:47.565 [http-nio-8081-exec-7] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:47.568 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求开始 - GET /api/article/draft - ArticleController.getDraftByUserId - 参数: 无
+2026-08-04 18:52:47.582 [http-nio-8081-exec-7] INFO  com.knockfish.aspect.LogAspect - [获取10条草稿] 请求成功 - 执行时间: 14ms
+2026-08-04 18:52:48.232 [http-nio-8081-exec-8] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/with-tag/36, 方法: GET
+2026-08-04 18:52:48.260 [http-nio-8081-exec-8] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:48.262 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求开始 - GET /api/article/with-tag/36 - ArticleController.getArticleWithTagsById - 参数: 36
+2026-08-04 18:52:48.268 [http-nio-8081-exec-8] INFO  com.knockfish.aspect.LogAspect - [获取文章详情(含标签)] 请求成功 - 执行时间: 6ms
+2026-08-04 18:52:57.186 [http-nio-8081-exec-9] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article, 方法: PUT
+2026-08-04 18:52:57.197 [http-nio-8081-exec-9] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:57.198 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求开始 - PUT /api/article - ArticleController.updateArticle - 参数: {"articleId":36,"title":"节流和防抖","cover":"https://fishbarn.cn/blog/article-image/2026-06/2b575cd3-ec52-4697-8265-2478d8b65b71.webp","description":"前端性能优化中，防抖和节流是两种手段，主要用于控制函数的执行频率","content":"# 防抖\n**什么是防抖**\n\n就是指连续触发事件但是在设定的一段时间内**只执行最后一次**\n例如`settimeout`定时器设定在1000 毫秒后执行，当触发一次事件，定时器会在 1000 毫秒后执行，但如果在1000毫秒之前又触发了事件，那定时器就会重新开始1000毫秒之后执行\n\n**防抖的应用场景**\n\n在需要限制频繁触发事件的情况，例如搜索框输入、文本编辑器实时保存，避免每次输入时都去请求返回数据。同样还有轮播图频繁触发切换也可以使用防抖限制\n\n**防抖实现**\n\n利用定时器，每次触发先清除以前的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onkeyup = function(){\n    // 防抖，如果当前定时器存在则清除定时器\n    if(timer !== null){\n        clearTimeout(timer)\n    }\n    // 创建新的定时器，设置1000毫秒后执行\n    timer = setTimeout(()=>{\n        console.log('事件执行')\n    }, 1000)\n}\n```\n# 节流\n**什么是节流**\n\n就是指高频触发事件但是在设定的一段时间内只执行一次函数\n例如`settimeout`定时器设定在1000 毫秒后执行，在1000毫秒触发再多次事件，也只会在1000毫秒后执行最开始的一次\n节流的应用场景\n在高频事件中，例如鼠标快速点击，鼠标滑动、resize事件、scroll事件等\n\n**节流的实现**\n\n同样利用定时器，等定时器执行完毕后，才开启新的定时器\n\n```javascript\nlet timer = null\ndocument.querySelector('input').onmouseover = function(){\n    // 节流，定时器如果存在直接返回\n    if(timer !== null){\n        return\n    }\n    timer = setTimeout(()=>{\n        console.log(\"事件执行\")\n        timer = null\n    }, 1000)\n}\n```\n# lodash库防抖和节流\nLodash是一个JavaScript工具库，提供了大量实用的函数来处理常见的编程任务。可以通过使用Lodash库中提供的防抖和节流函数来有效地控制事件的触发次数\n\n**_.debounce 防抖**\n\nlodash 中的 debounce 函数可以用于对一个函数在执行时添加延时，这样可以确保该函数不会被频繁调用，从而提升网页性能。具体来说，debounce 函数返回一个新的函数，该函数会在最后一次调用之后指定的时间内执行\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.debounce(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给button添加点击事件，在监听器的回调函数传入 _.debounce 函数，该函数会在最后一次调用之后等待 1000 毫秒在执行，这样就实现了防抖的效果\n\n**_.throttle节流**\n\nlodash 中的 throttle 函数可以用于对一个函数进行节流，即在一定时间内最多只能执行一次该函数。这样可以避免函数被频繁调用而影响页面性能。具体来说，throttle 函数返回一个新的函数，该函数会在每个指定时间间隔内最多执行一次原函数\n下面是一个简单的使用示例：\n\n```javascript\nlet btn = document.querySelector(\"button\")\nfunction myFunction(){\n    console.log(\"触发\")\n}\nbtn.addEventListener(\"click\", _.throttle(myFunction, 1000))\n```\n在这个例子中，首先我们获取 button 的 DOM 元素。然后定义一个 myFunction 的普通函数。给 button 添加点击事件，在监听器的回调函数传入 _.throttle 函数，该函数会在每个指定时间间隔内最多执行一次原函数，这样就实现了节流的效果\n\n\n\n","status":"DRAFT","publishTime":"2026-08-04 18:50:09","updatedTime":"2026-08-04 18:52:33","fileIds":null,"tags":[3,16]}
+2026-08-04 18:52:57.208 [http-nio-8081-exec-9] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章更新成功: articleId=36
+2026-08-04 18:52:57.216 [http-nio-8081-exec-9] INFO  com.knockfish.aspect.LogAspect - [更新文章] 请求成功 - 执行时间: 18ms
+2026-08-04 18:52:57.227 [http-nio-8081-exec-10] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/draft-count, 方法: GET
+2026-08-04 18:52:57.251 [http-nio-8081-exec-10] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:52:57.252 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求开始 - GET /api/article/draft-count - ArticleController.getDraftCount - 参数: 无
+2026-08-04 18:52:57.257 [http-nio-8081-exec-10] INFO  com.knockfish.aspect.LogAspect - [获取草稿数量] 请求成功 - 执行时间: 4ms
+2026-08-04 18:53:01.502 [http-nio-8081-exec-16] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/unbindUnused/36, 方法: POST
+2026-08-04 18:53:01.518 [http-nio-8081-exec-16] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:53:01.519 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求开始 - POST /api/article/unbindUnused/36 - ArticleController.unbindUnusedFiles - 参数: 36
+2026-08-04 18:53:01.527 [http-nio-8081-exec-16] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 批量解绑完成，共解绑 1 条文件引用记录
+2026-08-04 18:53:01.527 [http-nio-8081-exec-16] INFO  com.knockfish.service.impl.ArticleServiceImpl - 文章未使用图片解绑完成: articleId=36, 解绑数量=1
+2026-08-04 18:53:01.530 [http-nio-8081-exec-16] INFO  com.knockfish.aspect.LogAspect - [解绑文章未使用图片] 请求成功 - 执行时间: 11ms
+2026-08-04 18:53:01.600 [http-nio-8081-exec-12] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/article/list, 方法: GET
+2026-08-04 18:53:01.614 [http-nio-8081-exec-12] DEBUG com.knockfish.security.JwtAuthenticationFilter - 用户 [knockfish] (ID:1) JWT 认证通过
+2026-08-04 18:53:01.616 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求开始 - GET /api/article/list - ArticleController.getArticleList - 参数: {"userId":null,"title":null}, 1, 10
+2026-08-04 18:53:01.631 [http-nio-8081-exec-12] INFO  com.knockfish.aspect.LogAspect - [查询文章列表] 请求成功 - 执行时间: 14ms
+2026-08-04 19:04:01.798 [http-nio-8081-exec-15] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/all, 方法: GET
+2026-08-04 19:04:01.812 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求开始 - GET /api/file-reference/all - FileReferenceController.selectAllNoPage - 参数: 无
+2026-08-04 19:04:01.813 [http-nio-8081-exec-15] INFO  com.knockfish.controller.FileReferenceController - 查询所有文件引用
+2026-08-04 19:04:01.834 [http-nio-8081-exec-15] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求成功 - 执行时间: 22ms
+2026-08-04 19:04:01.855 [http-nio-8081-exec-17] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/referenced-paths, 方法: GET
+2026-08-04 19:04:01.856 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求开始 - GET /api/file-reference/referenced-paths - FileReferenceController.selectAllReferencedPaths - 参数: 无
+2026-08-04 19:04:01.857 [http-nio-8081-exec-17] INFO  com.knockfish.controller.FileReferenceController - 查询所有被引用的文件路径
+2026-08-04 19:04:01.859 [http-nio-8081-exec-17] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求成功 - 执行时间: 2ms
+2026-08-04 19:04:14.480 [http-nio-8081-exec-19] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/cleanup, 方法: POST
+2026-08-04 19:04:14.483 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [手动触发文件清理] 请求开始 - POST /api/file-reference/cleanup - FileReferenceController.cleanupOrphanFiles - 参数: 无
+2026-08-04 19:04:14.484 [http-nio-8081-exec-19] INFO  com.knockfish.controller.FileReferenceController - 手动触发文件清理任务
+2026-08-04 19:04:14.484 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - ========== 文件资源清理任务开始 ==========
+2026-08-04 19:04:14.500 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 发现 1 个孤立文件待清理:
+2026-08-04 19:04:14.501 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl -   文件ID: 47, 文件路径(key): blog/1/article/eca81c6f-1057-42ca-aa02-9478271a7b79.webp, 文件名: 屏幕截图 2026-08-01 143801.jpg, 文件大小: 89403 bytes, 创建时间: 2026-08-01T14:41:02, 引用类型: article, 引用ID: null
+2026-08-04 19:04:16.226 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 成功删除R2文件: blog/1/article/eca81c6f-1057-42ca-aa02-9478271a7b79.webp
+2026-08-04 19:04:16.234 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 成功从数据库删除 1 条文件引用记录
+2026-08-04 19:04:16.235 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - 文件资源清理完成，共处理 1 个文件，成功删除 1 个R2文件
+2026-08-04 19:04:16.235 [http-nio-8081-exec-19] INFO  c.knockfish.service.impl.FileReferenceServiceImpl - ========== 文件资源清理任务结束 ==========
+2026-08-04 19:04:16.235 [http-nio-8081-exec-19] INFO  com.knockfish.aspect.LogAspect - [手动触发文件清理] 请求成功 - 执行时间: 1751ms
+2026-08-04 19:04:16.254 [http-nio-8081-exec-20] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/all, 方法: GET
+2026-08-04 19:04:16.255 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求开始 - GET /api/file-reference/all - FileReferenceController.selectAllNoPage - 参数: 无
+2026-08-04 19:04:16.255 [http-nio-8081-exec-20] INFO  com.knockfish.controller.FileReferenceController - 查询所有文件引用
+2026-08-04 19:04:16.261 [http-nio-8081-exec-20] INFO  com.knockfish.aspect.LogAspect - [查询所有文件引用] 请求成功 - 执行时间: 6ms
+2026-08-04 19:04:16.268 [http-nio-8081-exec-21] INFO  com.knockfish.security.JwtAuthenticationFilter - === 请求路径: /api/file-reference/referenced-paths, 方法: GET
+2026-08-04 19:04:16.270 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求开始 - GET /api/file-reference/referenced-paths - FileReferenceController.selectAllReferencedPaths - 参数: 无
+2026-08-04 19:04:16.270 [http-nio-8081-exec-21] INFO  com.knockfish.controller.FileReferenceController - 查询所有被引用的文件路径
+2026-08-04 19:04:16.272 [http-nio-8081-exec-21] INFO  com.knockfish.aspect.LogAspect - [查询所有被引用的文件路径] 请求成功 - 执行时间: 2ms
+2026-08-04 22:20:27.901 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown initiated...
+2026-08-04 22:20:27.921 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - KnockfishHikariCP - Shutdown completed.
+2026-08-04 22:21:40.081 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-08-04 22:21:40.165 [main] INFO  c.knockfish.KnockfishBlogBackendApplicationTests - Starting KnockfishBlogBackendApplicationTests using Java 17.0.9 with PID 2712 (started by DELL in E:\fish_blog\knockfish-blog-backend)
+2026-08-04 22:21:40.166 [main] DEBUG c.knockfish.KnockfishBlogBackendApplicationTests - Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-08-04 22:21:40.167 [main] INFO  c.knockfish.KnockfishBlogBackendApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-08-04 22:21:48.391 [main] INFO  c.knockfish.KnockfishBlogBackendApplicationTests - Started KnockfishBlogBackendApplicationTests in 8.941 seconds (process running for 10.45)

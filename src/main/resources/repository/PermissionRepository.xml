@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.PermissionRepository">
+
+    <!-- 根据用户ID查询用户拥有的所有权限 -->
+    <select id="selectPermissionsByUserId" resultType="Permission">
+        SELECT DISTINCT p.*
+        FROM permission p
+        LEFT JOIN role_permission rp ON p.permission_id = rp.permission_id
+        LEFT JOIN user_role ur ON rp.role_id = ur.role_id
+        where ur.user_id = #{userId} and  p.status = 'ENABLE'
+        ORDER BY p.sort_order ASC
+    </select>
+    <!--  根据角色id查询角色拥有的权限  -->
+    <select id="selectPermissionsByRoleId" resultType="Permission">
+        SELECT DISTINCT p.*
+        FROM permission p
+        LEFT JOIN role_permission rp ON p.permission_id = rp.permission_id
+        where rp.role_id = #{roleId} and  p.status = 'ENABLE'
+        ORDER BY p.sort_order ASC
+    </select>
+    <!--  根据角色id查询角色拥有的权限ID  -->
+    <select id="selectPermissionIdsByRoleId" resultType="Long">
+        SELECT DISTINCT p.permission_id
+        FROM permission p
+        LEFT JOIN role_permission rp ON p.permission_id = rp.permission_id
+        LEFT JOIN user_role ur ON rp.role_id = ur.role_id
+        where ur.role_id = #{roleId} and  p.status = 'ENABLE'
+        ORDER BY p.sort_order ASC
+    </select>
+    <!-- 查询所有权限（用于权限管理页面） -->
+    <select id="selectAllPermissions" resultType="Permission">
+        SELECT *
+        FROM permission
+        <where>
+            <if test="permissionId != '' and permissionId != null">
+                permission_id like concat('%', #{permissionId}, '%')
+            </if>
+            <if test="permissionName != '' and permissionName != null">
+                and permission_name like concat('%', #{permissionName}, '%')
+            </if>
+            <if test="permissionCode != '' and permissionCode != null">
+                and permission_code like concat('%', #{permissionCode}, '%')
+            </if>
+        </where>
+        ORDER BY sort_order ASC
+    </select>
+
+    <!-- 根据ID查询单个权限 -->
+    <select id="selectPermissionById" resultType="Permission">
+        SELECT *
+        FROM permission
+        WHERE permission_id = #{permissionId}
+    </select>
+
+    <!-- 新增权限 -->
+    <insert id="insert">
+        INSERT INTO permission (permission_name, permission_code, type, parent_id, path, hidden, keep_alive, icon, component,
+        sort_order, create_time, status)
+        VALUES (#{permissionName}, #{permissionCode}, #{type}, #{parentId}, #{path}, #{hidden}, #{keepAlive}, #{icon}, #{component},
+        #{sortOrder}, NOW(), #{status})
+    </insert>
+
+    <!-- 修改权限 -->
+    <update id="updateById">
+        UPDATE permission
+        SET permission_name = #{permissionName},
+        permission_code = #{permissionCode},
+        type = #{type},
+        parent_id = #{parentId},
+        path = #{path},
+        icon = #{icon},
+        hidden = #{hidden},
+        keep_alive = #{keepAlice},
+        component = #{component},
+        sort_order = #{sortOrder},
+        status = #{status}
+        WHERE permission_id = #{permissionId}
+    </update>
+</mapper>

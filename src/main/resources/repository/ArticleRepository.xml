@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.ArticleRepository">
+    <select id="selectArticleWithTags" resultType="ArticleWithTagListVO">
+        SELECT
+        a.article_id,
+        a.title,
+        a.cover,
+        a.description,
+        a.status,
+        a.publish_time,
+        a.updated_time,
+        u.username,
+        u.user_id,
+        GROUP_CONCAT(t.tag_id) AS tagIds,
+        GROUP_CONCAT(t.tag_name) AS tagNames,
+        GROUP_CONCAT(t.color) AS tagColors
+        FROM `article` a
+        INNER JOIN `user` u ON a.user_id = u.user_id
+        LEFT JOIN article_tag at ON a.article_id = at.article_id
+        LEFT JOIN `tag` t ON at.tag_id = t.tag_id
+        <where>
+            a.status = 'PUBLISH'
+            <if test="userId != null and userId != 0">
+                AND a.user_id = #{userId}
+            </if>
+            <if test="title != null and title != ''">
+                AND a.title LIKE CONCAT(#{title}, '%')
+            </if>
+        </where>
+        GROUP BY a.article_id
+        ORDER BY a.publish_time DESC
+    </select>
+
+    <select id="selectArticleWithTagsById" resultType="ArticleDetailVO">
+        SELECT
+        a.article_id,
+        a.title,
+        a.cover,
+        a.description,
+        a.content,
+        a.status,
+        a.publish_time,
+        a.updated_time,
+        a.user_id,
+        GROUP_CONCAT(t.tag_id) AS tag_ids,
+        GROUP_CONCAT(t.tag_name) AS tag_names,
+        GROUP_CONCAT(t.color) AS tag_colors
+        FROM article a
+        LEFT JOIN article_tag at ON a.article_id = at.article_id
+        LEFT JOIN tag t ON at.tag_id = t.tag_id
+        WHERE a.article_id = #{articleId}
+        GROUP BY a.article_id
+    </select>
+
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(*) as draftCount
+        from article
+        where status = 'DRAFT' and user_id = #{userId}
+    </select>
+
+    <select id="selectArticleWithUserById" resultType="ArticleViewVO">
+        select
+        a.article_id,
+        a.title,
+        a.cover,
+        a.description,
+        a.content,
+        a.status,
+        a.publish_time,
+        a.updated_time,
+        a.user_id,
+        u.username
+        from `article` a
+        inner join `user` u on a.user_id = u.user_id
+        where a.article_id = #{articleId}
+    </select>
+
+    <select id="selectArticleById" resultType="Article">
+        select article_id, title, cover, description, content, status, publish_time, updated_time, user_id
+        from `article`
+        where article_id = #{articleId}
+    </select>
+
+    <select id="selectAll" resultType="Article">
+        select article_id, title, cover, publish_time
+        from `article`
+        <where>
+            status = 'PUBLISH'
+            <if test="userId != null and userId != 0">
+                AND user_id = #{userId}
+            </if>
+            <if test="title != null and title != ''">
+                and title like concat(#{title}, '%')
+            </if>
+        </where>
+        order by publish_time desc
+    </select>
+
+    <select id="selectDraftByUserId" resultType="Article">
+        select article_id, title, content, cover, description, updated_time, publish_time
+        from article
+        where status = 'DRAFT' and user_id = #{userId}
+        order by updated_time desc
+        limit 10
+    </select>
+
+    <insert id="insert" parameterType="Article" useGeneratedKeys="true" keyProperty="articleId" keyColumn="articleId">
+        insert into `article` (title, cover, description, content, status, publish_time, updated_time, user_id)
+        values (#{title}, #{cover}, #{description}, #{content}, #{status}, #{publishTime}, #{updatedTime}, #{userId})
+    </insert>
+
+    <update id="updateById" parameterType="Article">
+        update `article`
+        <trim prefix="set" suffixOverrides=",">
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="cover != null and cover != ''">
+                cover = #{cover},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="publishTime != null">
+                publish_time = #{publishTime},
+            </if>
+            <if test="updatedTime != null">
+                updated_time = #{updatedTime},
+            </if>
+        </trim>
+        where article_id = #{articleId}
+    </update>
+
+    <delete id="deleteById">
+        delete from `article` where article_id = #{articleId}
+    </delete>
+
+    <update id="clearUpdatedTime">
+        update `article` set updated_time = NULL where article_id = #{articleId}
+    </update>
+
+    <delete id="batchDelete">
+        delete from `article` where article_id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectArticleArchiveList" resultType="ArticleArchiveVO">
+        SELECT
+        a.article_id,
+        a.title,
+        a.description,
+        a.publish_time,
+        GROUP_CONCAT(t.tag_name) AS tagNames,
+        0 AS views
+        FROM `article` a
+        LEFT JOIN article_tag at ON a.article_id = at.article_id
+        LEFT JOIN `tag` t ON at.tag_id = t.tag_id
+        WHERE a.status = 'PUBLISH'
+        GROUP BY a.article_id
+        ORDER BY a.publish_time DESC
+    </select>
+
+    <select id="selectArticleCount" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM article WHERE status = 'PUBLISH'
+    </select>
+
+    <select id="selectMonthlyArticleCount" resultType="map">
+        SELECT DATE_FORMAT(publish_time, '%Y-%m') AS month, COUNT(*) AS count
+        FROM article
+        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        AND YEAR(publish_time) = #{year}
+        GROUP BY DATE_FORMAT(publish_time, '%Y-%m')
+        ORDER BY month ASC
+    </select>
+
+    <select id="selectWeeklyArticleCount" resultType="map">
+        SELECT WEEK(publish_time, 1) AS week, COUNT(*) AS count
+        FROM article
+        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        AND YEAR(publish_time) = #{year}
+        GROUP BY WEEK(publish_time, 1)
+        ORDER BY week ASC
+    </select>
+
+    <select id="selectYearlyArticleCount" resultType="map">
+        SELECT YEAR(publish_time) AS year, COUNT(*) AS count
+        FROM article
+        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        GROUP BY YEAR(publish_time)
+        ORDER BY year ASC
+    </select>
+
+    <select id="selectLatestArticles" resultType="com.knockfish.vo.dashboard.ArticleLatestVO">
+        SELECT article_id AS articleId, title, cover, DATE_FORMAT(publish_time, '%Y-%m-%d') AS publishTime
+        FROM article
+        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        ORDER BY publish_time DESC
+        LIMIT #{limit}
+    </select>
+
+    <!-- Agent: 关键词搜索已发布文章（标题/简介/内容模糊匹配） -->
+    <select id="selectArticlesByKeyword" resultType="ArticleWithTagListVO">
+        SELECT
+        a.article_id,
+        a.title,
+        a.cover,
+        a.description,
+        a.status,
+        a.publish_time,
+        a.updated_time,
+        u.username,
+        u.user_id,
+        GROUP_CONCAT(t.tag_id) AS tagIds,
+        GROUP_CONCAT(t.tag_name) AS tagNames,
+        GROUP_CONCAT(t.color) AS tagColors
+        FROM `article` a
+        INNER JOIN `user` u ON a.user_id = u.user_id
+        LEFT JOIN article_tag at ON a.article_id = at.article_id
+        LEFT JOIN `tag` t ON at.tag_id = t.tag_id
+        WHERE a.status = 'PUBLISH'
+        AND (
+            a.title LIKE CONCAT('%', #{keyword}, '%')
+            OR a.description LIKE CONCAT('%', #{keyword}, '%')
+            OR a.content LIKE CONCAT('%', #{keyword}, '%')
+        )
+        GROUP BY a.article_id
+        ORDER BY a.publish_time DESC
+    </select>
+
+    <!-- Agent: 根据标签名查询文章 -->
+    <select id="selectArticlesByTagName" resultType="ArticleWithTagListVO">
+        SELECT
+        a.article_id,
+        a.title,
+        a.cover,
+        a.description,
+        a.status,
+        a.publish_time,
+        a.updated_time,
+        u.username,
+        u.user_id,
+        GROUP_CONCAT(t.tag_id) AS tagIds,
+        GROUP_CONCAT(t.tag_name) AS tagNames,
+        GROUP_CONCAT(t.color) AS tagColors
+        FROM `article` a
+        INNER JOIN `user` u ON a.user_id = u.user_id
+        INNER JOIN article_tag at ON a.article_id = at.article_id
+        INNER JOIN `tag` t ON at.tag_id = t.tag_id
+        WHERE a.status = 'PUBLISH'
+        AND t.tag_name = #{tagName}
+        GROUP BY a.article_id
+        ORDER BY a.publish_time DESC
+    </select>
+</mapper>
