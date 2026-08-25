@@ -1,2 +1,0 @@
-2026-07-08 21:13:03.003 [http-nio-8081-exec-20] WARN  com.knockfish.service.impl.AuthServiceImpl - 登录失败: 账号不存在, username=knoqwe
-2026-07-08 21:13:03.020 [http-nio-8081-exec-20] WARN  com.knockfish.exception.GlobalExceptionHandler - 业务异常: code=404, msg=账号不存在
