@@ -47,7 +47,7 @@
         article a on at.article_id = a.article_id
         where
         at.tag_id = #{tagId}
-        and a.status = 'PUBLISH'
+        and a.status = 'publish'
         order by a.publish_time desc
     </select>
     <!--  查询所有标签 -->

@@ -23,7 +23,7 @@ public class ArticleUpdateDTO {
     private String description;
     @Schema(description = "文章内容", example = "# Hello World\\n\\n这是一篇测试文章")
     private String content;
-    @Schema(description = "文章状态", example = "PUBLISHED")
+    @Schema(description = "文章状态", example = "publish")
     private ArticleStatus status;
     @Schema(description = "发布时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

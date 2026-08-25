@@ -17,7 +17,7 @@ public class PermissionUpdateDTO {
     @Schema(description = "权限名称", example = "用户管理", requiredMode = Schema.RequiredMode.REQUIRED)
     private String permissionName;
     @NotBlank(message = "权限类型不能为空")
-    @Schema(description = "权限类型", example = "MENU", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "权限类型", example = "menu", requiredMode = Schema.RequiredMode.REQUIRED)
     private PermissionType type;
     @Schema(description = "父级权限ID", example = "0")
     private int parentId;
@@ -35,6 +35,6 @@ public class PermissionUpdateDTO {
     private String component;
     @Schema(description = "排序号", example = "1")
     private int sortOrder;
-    @Schema(description = "状态", example = "ACTIVE")
+    @Schema(description = "状态", example = "enable")
     private PermissionStatus status;
 }

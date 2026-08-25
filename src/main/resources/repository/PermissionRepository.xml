@@ -10,7 +10,7 @@
         FROM permission p
         LEFT JOIN role_permission rp ON p.permission_id = rp.permission_id
         LEFT JOIN user_role ur ON rp.role_id = ur.role_id
-        where ur.user_id = #{userId} and  p.status = 'ENABLE'
+        where ur.user_id = #{userId} and  p.status = 'enable'
         ORDER BY p.sort_order ASC
     </select>
     <!--  根据角色id查询角色拥有的权限  -->
@@ -18,7 +18,7 @@
         SELECT DISTINCT p.*
         FROM permission p
         LEFT JOIN role_permission rp ON p.permission_id = rp.permission_id
-        where rp.role_id = #{roleId} and  p.status = 'ENABLE'
+        where rp.role_id = #{roleId} and  p.status = 'enable'
         ORDER BY p.sort_order ASC
     </select>
     <!--  根据角色id查询角色拥有的权限ID  -->
@@ -27,7 +27,7 @@
         FROM permission p
         LEFT JOIN role_permission rp ON p.permission_id = rp.permission_id
         LEFT JOIN user_role ur ON rp.role_id = ur.role_id
-        where ur.role_id = #{roleId} and  p.status = 'ENABLE'
+        where ur.role_id = #{roleId} and  p.status = 'enable'
         ORDER BY p.sort_order ASC
     </select>
     <!-- 查询所有权限（用于权限管理页面） -->

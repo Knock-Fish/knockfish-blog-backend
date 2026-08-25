@@ -22,7 +22,7 @@ public class ArticleVO {
     private String description;
     @Schema(description = "文章内容", example = "<p>文章内容...</p>")
     private String content;
-    @Schema(description = "文章状态", example = "PUBLISH")
+    @Schema(description = "文章状态", example = "publish")
     private ArticleStatus status;
     @Schema(description = "发布时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

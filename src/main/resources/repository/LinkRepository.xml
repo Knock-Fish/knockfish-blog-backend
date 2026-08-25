@@ -15,13 +15,13 @@
     <!--  查询友链列表（前端展示用） -->
     <select id="selectAllForFront" resultType="Link">
         select * from `link`
-        where status = 'DISPLAY'
+        where status = 'display'
         order by create_time desc
     </select>
     <!--  插入友链  -->
     <insert id="insert" parameterType="Link" useGeneratedKeys="true" keyProperty="linkId" keyColumn="linkId">
         insert into `link` (link_name, link_url, avatar, description, status, create_time)
-        values (#{linkName}, #{linkUrl}, #{avatar}, #{description}, #{status}, #{createTime})
+        values (#{linkName}, #{linkUrl}, IFNULL(#{avatar}, ''), IFNULL(#{description}, ''), IFNULL(#{status}, 'display'), #{createTime})
     </insert>
     <!--  更新友链  -->
     <update id="updateById">

@@ -47,7 +47,7 @@
         u.description,
         u.github_url,
         u.bilibili_url,
-        (select count(1) from article a where a.user_id = u.user_id and a.status = 'PUBLISH') as articleCount,
+        (select count(1) from article a where a.user_id = u.user_id and a.status = 'publish') as articleCount,
         (select count(1) from tag) as tagCount,
         (select count(1) from site) as siteCount
         from `user` u
