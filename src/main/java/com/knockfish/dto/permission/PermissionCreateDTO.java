@@ -21,7 +21,7 @@ public class PermissionCreateDTO {
     @NotBlank(message = "权限编码不能为空")
     @Schema(description = "权限编码", example = "user:manage", requiredMode = Schema.RequiredMode.REQUIRED)
     private String permissionCode;
-    @Schema(description = "权限类型", example = "MENU", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "权限类型", example = "menu", requiredMode = Schema.RequiredMode.REQUIRED)
     private PermissionType type;
     @Schema(description = "父级权限ID", example = "0")
     private int parentId;
@@ -41,6 +41,6 @@ public class PermissionCreateDTO {
     private int sortOrder;
     @Schema(description = "创建时间")
     private LocalDateTime createTime;
-    @Schema(description = "状态", example = "ACTIVE")
+    @Schema(description = "状态", example = "enable")
     private PermissionStatus status;
 }

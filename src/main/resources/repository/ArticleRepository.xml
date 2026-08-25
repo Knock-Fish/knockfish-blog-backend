@@ -22,7 +22,7 @@
         LEFT JOIN article_tag at ON a.article_id = at.article_id
         LEFT JOIN `tag` t ON at.tag_id = t.tag_id
         <where>
-            a.status = 'PUBLISH'
+            a.status = 'publish'
             <if test="userId != null and userId != 0">
                 AND a.user_id = #{userId}
             </if>
@@ -58,7 +58,7 @@
     <select id="selectCount" resultType="java.lang.Integer">
         select count(*) as draftCount
         from article
-        where status = 'DRAFT' and user_id = #{userId}
+        where status = 'draft' and user_id = #{userId}
     </select>
 
     <select id="selectArticleWithUserById" resultType="ArticleViewVO">
@@ -88,7 +88,7 @@
         select article_id, title, cover, publish_time
         from `article`
         <where>
-            status = 'PUBLISH'
+            status = 'publish'
             <if test="userId != null and userId != 0">
                 AND user_id = #{userId}
             </if>
@@ -102,7 +102,7 @@
     <select id="selectDraftByUserId" resultType="Article">
         select article_id, title, content, cover, description, updated_time, publish_time
         from article
-        where status = 'DRAFT' and user_id = #{userId}
+        where status = 'draft' and user_id = #{userId}
         order by updated_time desc
         limit 10
     </select>
@@ -166,19 +166,19 @@
         FROM `article` a
         LEFT JOIN article_tag at ON a.article_id = at.article_id
         LEFT JOIN `tag` t ON at.tag_id = t.tag_id
-        WHERE a.status = 'PUBLISH'
+        WHERE a.status = 'publish'
         GROUP BY a.article_id
         ORDER BY a.publish_time DESC
     </select>
 
     <select id="selectArticleCount" resultType="java.lang.Long">
-        SELECT COUNT(*) FROM article WHERE status = 'PUBLISH'
+        SELECT COUNT(*) FROM article WHERE status = 'publish'
     </select>
 
     <select id="selectMonthlyArticleCount" resultType="map">
         SELECT DATE_FORMAT(publish_time, '%Y-%m') AS month, COUNT(*) AS count
         FROM article
-        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        WHERE status = 'publish' AND publish_time IS NOT NULL
         AND YEAR(publish_time) = #{year}
         GROUP BY DATE_FORMAT(publish_time, '%Y-%m')
         ORDER BY month ASC
@@ -187,7 +187,7 @@
     <select id="selectWeeklyArticleCount" resultType="map">
         SELECT WEEK(publish_time, 1) AS week, COUNT(*) AS count
         FROM article
-        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        WHERE status = 'publish' AND publish_time IS NOT NULL
         AND YEAR(publish_time) = #{year}
         GROUP BY WEEK(publish_time, 1)
         ORDER BY week ASC
@@ -196,7 +196,7 @@
     <select id="selectYearlyArticleCount" resultType="map">
         SELECT YEAR(publish_time) AS year, COUNT(*) AS count
         FROM article
-        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        WHERE status = 'publish' AND publish_time IS NOT NULL
         GROUP BY YEAR(publish_time)
         ORDER BY year ASC
     </select>
@@ -204,7 +204,7 @@
     <select id="selectLatestArticles" resultType="com.knockfish.vo.dashboard.ArticleLatestVO">
         SELECT article_id AS articleId, title, cover, DATE_FORMAT(publish_time, '%Y-%m-%d') AS publishTime
         FROM article
-        WHERE status = 'PUBLISH' AND publish_time IS NOT NULL
+        WHERE status = 'publish' AND publish_time IS NOT NULL
         ORDER BY publish_time DESC
         LIMIT #{limit}
     </select>
@@ -228,7 +228,7 @@
         INNER JOIN `user` u ON a.user_id = u.user_id
         LEFT JOIN article_tag at ON a.article_id = at.article_id
         LEFT JOIN `tag` t ON at.tag_id = t.tag_id
-        WHERE a.status = 'PUBLISH'
+        WHERE a.status = 'publish'
         AND (
             a.title LIKE CONCAT('%', #{keyword}, '%')
             OR a.description LIKE CONCAT('%', #{keyword}, '%')
@@ -257,7 +257,7 @@
         INNER JOIN `user` u ON a.user_id = u.user_id
         INNER JOIN article_tag at ON a.article_id = at.article_id
         INNER JOIN `tag` t ON at.tag_id = t.tag_id
-        WHERE a.status = 'PUBLISH'
+        WHERE a.status = 'publish'
         AND t.tag_name = #{tagName}
         GROUP BY a.article_id
         ORDER BY a.publish_time DESC

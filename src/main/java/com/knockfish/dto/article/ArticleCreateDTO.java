@@ -20,7 +20,7 @@ public class ArticleCreateDTO {
     private String description;
     @Schema(description = "文章内容", example = "# Hello World\\n\\n这是一篇测试文章")
     private String content;
-    @Schema(description = "文章状态", example = "DRAFT")
+    @Schema(description = "文章状态", example = "draft")
     private ArticleStatus status;
     @Schema(description = "发布时间")
     private LocalDateTime publishTime;

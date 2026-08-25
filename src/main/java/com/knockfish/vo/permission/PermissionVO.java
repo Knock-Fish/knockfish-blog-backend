@@ -19,7 +19,7 @@ public class PermissionVO {
     private String permissionName;
     @Schema(description = "权限编码", example = "user:manage")
     private String permissionCode;
-    @Schema(description = "权限类型", example = "MENU")
+    @Schema(description = "权限类型", example = "menu")
     private PermissionType type;
     @Schema(description = "父级权限ID", example = "0")
     private int parentId;
@@ -40,6 +40,6 @@ public class PermissionVO {
     @Schema(description = "创建时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
-    @Schema(description = "状态", example = "ACTIVE")
+    @Schema(description = "状态", example = "enable")
     private PermissionStatus status;
 }
