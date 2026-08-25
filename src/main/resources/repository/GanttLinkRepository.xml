@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.GanttLinkRepository">
+
+    <select id="selectByUserId" resultType="GanttLink">
+        select link_id, user_id, source, target, type, create_time
+        from gantt_link
+        where user_id = #{userId}
+        order by create_time
+    </select>
+
+    <insert id="insert" parameterType="GanttLink" useGeneratedKeys="true" keyProperty="linkId" keyColumn="link_id">
+        insert into gantt_link (user_id, source, target, type, create_time)
+        values (#{userId}, #{source}, #{target}, #{type}, #{createTime})
+    </insert>
+
+    <delete id="deleteByLinkId">
+        delete from gantt_link where link_id = #{linkId}
+    </delete>
+
+    <delete id="deleteByTaskId">
+        delete from gantt_link where source = #{taskId} or target = #{taskId}
+    </delete>
+
+    <delete id="deleteByUserId">
+        delete from gantt_link where user_id = #{userId}
+    </delete>
+
+</mapper>
