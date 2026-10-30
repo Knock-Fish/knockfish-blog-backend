@@ -216,6 +216,7 @@
         a.title,
         a.cover,
         a.description,
+        a.content,
         a.status,
         a.publish_time,
         a.updated_time,

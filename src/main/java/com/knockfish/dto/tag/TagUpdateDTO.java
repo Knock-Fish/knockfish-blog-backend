@@ -2,13 +2,14 @@ package com.knockfish.dto.tag;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
 @Schema(description = "标签更新请求DTO")
 public class TagUpdateDTO {
-    @NotBlank(message = "标签ID不能为空")
+    @NotNull(message = "标签ID不能为空")
     @Schema(description = "标签ID", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
     private Long tagId;
     @NotBlank(message = "标签名称不能为空")

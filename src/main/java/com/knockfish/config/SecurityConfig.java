@@ -49,7 +49,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        // 1. 允许跨域请求的来源域名（本地开发 + 线上正式域名）
+        // 允许跨域请求的来源域名（本地开发 + 线上正式域名）
         configuration.setAllowedOrigins(Arrays.asList(
                 "http://localhost:5173",
                 "http://localhost:5174",
@@ -58,19 +58,19 @@ public class SecurityConfig {
                 "https://blog.fishbarn.cn"
         ));
 
-        // 2. 允许的所有HTTP请求方法
+        // 允许的所有HTTP请求方法
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
 
-        // 3. 允许客户端携带的所有请求头（JWT的Authorization头在此范围内）
+        // 允许客户端携带的所有请求头（JWT的Authorization头在此范围内）
         configuration.setAllowedHeaders(List.of("*"));
 
-        // 4. 暴露响应头，允许前端JS读取指定响应头（用于前端获取Token）
+        // 暴露响应头，允许前端JS读取指定响应头（用于前端获取Token）
         configuration.setExposedHeaders(Arrays.asList("Authorization", "token"));
 
-        // 5. 允许跨域请求携带Cookie、凭证信息
+        // 允许跨域请求携带Cookie、凭证信息
         configuration.setAllowCredentials(true);
 
-        // 6. 预检请求有效期（单位：秒），3600秒=1小时，减少OPTIONS预检请求次数
+        // 预检请求有效期（单位：秒），3600秒=1小时，减少OPTIONS预检请求次数
         configuration.setMaxAge(3600L);
 
         // 绑定跨域配置到全局所有接口
