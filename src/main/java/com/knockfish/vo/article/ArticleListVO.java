@@ -17,7 +17,7 @@ public class ArticleListVO {
     private String title;
     @Schema(description = "封面图片URL", example = "https://example.com/cover.jpg")
     private String cover;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Schema(description = "发布时间")
     private LocalDateTime publishTime;
 }

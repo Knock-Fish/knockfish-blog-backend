@@ -24,6 +24,9 @@ import com.knockfish.utils.UrlUtil;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,12 +48,22 @@ public class ArticleServiceImpl implements ArticleService {
     private final FileReferenceService fileReferenceService;
 
     @Override
+    @Cacheable(
+            value = "articleCache",
+            key = "T(com.knockfish.utils.CacheKeyUtil).fingerprint('getArticleWithTags', #query, #pageNum, #pageSize)",
+            unless = "#result == null"
+    )
     public PageInfo<ArticleWithTagListVO> getArticleWithTags(ArticleQueryDTO query, Integer pageNum, Integer pageSize){
         try(Page<Object> page = PageHelper.startPage(pageNum, pageSize)){
             return PageInfo.of(articleRepository.selectArticleWithTags(query));
         }
     }
     @Override
+    @Cacheable(
+            value = "articleCache",
+            key = "T(com.knockfish.utils.CacheKeyUtil).fingerprint('getArticleList', #query, #pageNum, #pageSize)",
+            unless = "#result == null"
+    )
     public PageInfo<ArticleListVO> getArticleList(ArticleQueryDTO query, Integer pageNum, Integer pageSize ){
         try(Page<ArticleListVO> page = PageHelper.startPage(pageNum, pageSize)){
             List<Article> articleListEntity = articleRepository.selectAll(query);
@@ -73,16 +86,22 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Cacheable(value = "articleDetailCache", key = "'getArticleWithTagsById:' + #id", unless = "#result == null")
     public ArticleDetailVO getArticleWithTagsById(Long id){
         return articleRepository.selectArticleWithTagsById(id);
     }
 
+    @Cacheable(value = "articleDetailCache", key = "'getArticleById:' + #id", unless = "#result == null")
     public ArticleViewVO getArticleById(Long id){
         return articleRepository.selectArticleWithUserById(id);
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
+    @Caching(evict = {
+            @CacheEvict(value = "articleCache", allEntries = true),
+            @CacheEvict(value = "articleDetailCache", allEntries = true)
+    })
     public Long createArticle(ArticleCreateDTO articleCreateDTO){
         Article articleEntity = articleConvert.createToEntity(articleCreateDTO);
         // 默认设为草稿（打开即创建场景，status 可能为 null）
@@ -110,6 +129,10 @@ public class ArticleServiceImpl implements ArticleService {
     }
     @Override
     @Transactional(rollbackFor = Exception.class)
+    @Caching(evict = {
+            @CacheEvict(value = "articleCache", allEntries = true),
+            @CacheEvict(value = "articleDetailCache", allEntries = true)
+    })
     public void updateArticle(ArticleUpdateDTO articleUpdateDTO){
         Article articleEntity = articleConvert.updateToEntity(articleUpdateDTO);
         // 获取旧文章，判断状态变化
@@ -146,6 +169,10 @@ public class ArticleServiceImpl implements ArticleService {
     }
     @Override
     @Transactional(rollbackFor = Exception.class)
+    @Caching(evict = {
+            @CacheEvict(value = "articleCache", allEntries = true),
+            @CacheEvict(value = "articleDetailCache", allEntries = true)
+    })
     public void deleteArticle(Long id){
         if(id == null){
             throw new CustomException(404, "文章不存在");
@@ -180,6 +207,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Cacheable(value = "articleCache", key = "'getArticleArchiveList'", unless = "#result == null")
     public List<ArticleArchiveVO> getArticleArchiveList() {
         return articleRepository.selectArticleArchiveList();
     }
