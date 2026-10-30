@@ -8,8 +8,11 @@ import com.knockfish.convert.NoteConvert;
 import com.knockfish.dto.file_reference.FileReferenceQueryByRefDTO;
 import com.knockfish.dto.note.NoteCreateDTO;
 import com.knockfish.dto.note.NoteQueryDTO;
+import com.knockfish.dto.note.NoteStatusUpdateDTO;
 import com.knockfish.dto.note.NoteUpdateDTO;
 import com.knockfish.entity.Note;
+import com.knockfish.enums.NoteStatus;
+import com.knockfish.exception.CustomException;
 import com.knockfish.repository.NoteRepository;
 import com.knockfish.service.FileReferenceService;
 import com.knockfish.service.NoteService;
@@ -56,6 +59,17 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    public PageInfo<NoteVO> getDisplayNoteList(Integer pageNum, Integer pageSize) {
+        try (Page<NoteVO> page = PageHelper.startPage(pageNum, pageSize)) {
+            List<Note> noteListEntity = noteRepository.selectDisplayList();
+            List<NoteVO> noteListVO = noteConvert.listToVOlist(noteListEntity);
+            PageInfo<NoteVO> pageInfo = PageInfo.of(page);
+            pageInfo.setList(noteListVO);
+            return pageInfo;
+        }
+    }
+
+    @Override
     public List<NoteMenuVO> getNoteMenuList() {
         List<Note> noteListEntity = noteRepository.selectMenuList();
         return noteConvert.listToVOMenulist(noteListEntity);
@@ -64,6 +78,19 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public NoteDetailVO getNoteById(Long noteId) {
         Note note = noteRepository.selectById(noteId);
+        if (note == null) {
+            throw new CustomException(404, "笔记不存在");
+        }
+        return noteConvert.toDetailVO(note);
+    }
+
+    @Override
+    public NoteDetailVO getDisplayNoteById(Long noteId) {
+        // SQL 层已限定 status = 'display'，隐藏笔记在此处查不到，对外表现为不存在
+        Note note = noteRepository.selectDisplayById(noteId);
+        if (note == null) {
+            throw new CustomException(404, "笔记不存在");
+        }
         return noteConvert.toDetailVO(note);
     }
 
@@ -71,6 +98,10 @@ public class NoteServiceImpl implements NoteService {
     public Long createNote(NoteCreateDTO createDTO) {
         Note entity = noteConvert.createToEntity(createDTO);
         entity.setCreateTime(LocalDateTime.now());
+        // 新增笔记默认对外显示
+        if (entity.getStatus() == null) {
+            entity.setStatus(NoteStatus.DISPLAY);
+        }
         noteRepository.insert(entity);
         return entity.getNoteId();
     }
@@ -79,6 +110,19 @@ public class NoteServiceImpl implements NoteService {
     public void updateNote(NoteUpdateDTO updateDTO) {
         Note entity = noteConvert.updateToEntity(updateDTO);
         noteRepository.updateById(entity);
+    }
+
+    @Override
+    public void updateNoteStatus(NoteStatusUpdateDTO statusUpdateDTO) {
+        if (statusUpdateDTO.getNoteId() == null) {
+            throw new CustomException(400, "笔记ID不能为空");
+        }
+        Note note = noteRepository.selectById(statusUpdateDTO.getNoteId());
+        if (note == null) {
+            throw new CustomException(404, "笔记不存在");
+        }
+        noteRepository.updateStatusById(statusUpdateDTO.getNoteId(), statusUpdateDTO.getStatus());
+        log.info("笔记展示状态更新: noteId={}, status={}", statusUpdateDTO.getNoteId(), statusUpdateDTO.getStatus());
     }
 
     @Override

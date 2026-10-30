@@ -1,5 +1,6 @@
 package com.knockfish.vo.note;
 
+import com.knockfish.enums.NoteStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,5 +12,6 @@ public class NoteVO {
     private Long noteId;
     private String noteTitle;
     private int sort;
+    private NoteStatus status;
     private LocalDateTime createTime;
 }

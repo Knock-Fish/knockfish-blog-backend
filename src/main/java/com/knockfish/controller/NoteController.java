@@ -7,6 +7,7 @@ import com.knockfish.annotation.RequiresPermission;
 import com.knockfish.common.Result;
 import com.knockfish.dto.note.NoteCreateDTO;
 import com.knockfish.dto.note.NoteQueryDTO;
+import com.knockfish.dto.note.NoteStatusUpdateDTO;
 import com.knockfish.dto.note.NoteUpdateDTO;
 import com.knockfish.service.NoteService;
 import com.knockfish.utils.PageConvertUtil;
@@ -38,9 +39,8 @@ public class NoteController {
         return Result.success(noteService.getNoteMenuList());
     }
 
-    @PublicApi
     @GetMapping
-    @Operation(summary = "获取笔记列表", description = "获取所有笔记列表")
+    @Operation(summary = "获取笔记列表（管理端）", description = "获取所有笔记列表，含隐藏笔记，需登录")
     @Log("获取笔记列表")
     public Result<PageResultVO<NoteVO>> getNoteList(@Parameter(description = "查询条件") NoteQueryDTO query,
                                                       @Parameter(description = "页码") @RequestParam(defaultValue = "1") Integer pageNum,
@@ -50,11 +50,38 @@ public class NoteController {
     }
 
     @PublicApi
+    @GetMapping("/display")
+    @Operation(summary = "获取笔记列表（前台）", description = "仅返回显示状态的笔记")
+    @Log("获取展示笔记列表")
+    public Result<PageResultVO<NoteVO>> getDisplayNoteList(
+            @Parameter(description = "页码") @RequestParam(defaultValue = "1") Integer pageNum,
+            @Parameter(description = "每页数量") @RequestParam(defaultValue = "10") Integer pageSize) {
+        PageInfo<NoteVO> noteList = noteService.getDisplayNoteList(pageNum, pageSize);
+        return Result.success(PageConvertUtil.convert(noteList));
+    }
+
     @GetMapping("/{id}")
-    @Operation(summary = "获取笔记详情", description = "根据ID获取笔记详情")
+    @Operation(summary = "获取笔记详情（管理端）", description = "根据ID获取笔记详情，含隐藏笔记，需登录")
     @Log("获取笔记详情")
     public Result<NoteDetailVO> getNoteById(@Parameter(description = "笔记ID") @PathVariable Long id) {
         return Result.success(noteService.getNoteById(id));
+    }
+
+    @PublicApi
+    @GetMapping("/display/{id}")
+    @Operation(summary = "获取笔记详情（前台）", description = "根据ID获取显示状态的笔记详情，隐藏笔记返回不存在")
+    @Log("获取展示笔记详情")
+    public Result<NoteDetailVO> getDisplayNoteById(@Parameter(description = "笔记ID") @PathVariable Long id) {
+        return Result.success(noteService.getDisplayNoteById(id));
+    }
+
+    @PutMapping("/status")
+    @Operation(summary = "更新笔记展示状态", description = "切换笔记显示/隐藏，不影响笔记正文")
+    @RequiresPermission("blog:note:edit")
+    @Log("更新笔记展示状态")
+    public Result<Void> updateNoteStatus(@Parameter(description = "笔记状态信息") @Valid @RequestBody NoteStatusUpdateDTO statusUpdateDTO) {
+        noteService.updateNoteStatus(statusUpdateDTO);
+        return Result.success();
     }
 
     @PostMapping

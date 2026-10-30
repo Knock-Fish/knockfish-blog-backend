@@ -1,6 +1,7 @@
 package com.knockfish.entity;
 
 
+import com.knockfish.enums.NoteStatus;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -11,5 +12,6 @@ public class Note {
     private String noteTitle;
     private String noteContent;
     private int sort;
+    private NoteStatus status;
     private LocalDateTime createTime;
 }
