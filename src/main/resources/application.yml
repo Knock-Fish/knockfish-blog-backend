@@ -20,8 +20,8 @@ spring:
     name: knockfish-blog-backend
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 123456
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
     url: jdbc:mysql://localhost:3306/knockfish_blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true&useServerPrepStmts=true&cachePrepStmts=true&prepStmtCacheSize=256&prepStmtCacheSqlLimit=2048
     hikari:
       maximum-pool-size: 20
@@ -34,8 +34,9 @@ spring:
       leak-detection-threshold: 60000
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
       timeout: 5000
       lettuce:
         pool:
@@ -44,7 +45,8 @@ spring:
           min-idle: 5
           max-wait: 5000
 jwt:
-  secret: YOU_SECRET
+  private-key: classpath:private_key.pem
+  public-key: classpath:public_key.pem
   expiration: 360000000
 mybatis:
   mapper-locations: classpath:repository/*.xml
@@ -52,6 +54,7 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
     cache-enabled: true
+    default-enum-type-handler: com.knockfish.handler.UniversalEnumTypeHandler
   type-aliases-package: com.knockfish.entity, com.knockfish.vo
 upload:
   dir:
@@ -64,13 +67,13 @@ upload:
 cloud:
   aws:
     s3:
-      endpoint: YOU_ENDPOINT
-      bucket-name: YOU_BUCKET_NAME
-      cdn-domain: YOU_CDN_DOMAIN
+      endpoint: https://57e3baed33f3640a31710eb39ff795ff.r2.cloudflarestorage.com
+      bucket-name: knockfish-blog-storage
+      cdn-domain: https://fishbarn.cn
       region: auto
       credentials:
-        access-key: YOU_ACCESS_KEY
-        secret-key: YOU_SECRET_KEY
+        access-key: ${R2_ACCESS_KEY:}
+        secret-key: ${R2_SECRET_KEY:}
 springdoc:
   api-docs:
     enabled: true

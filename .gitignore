@@ -31,3 +31,8 @@ build/
 
 # 本地私有配置
 src/main/resources/application-local.yml
+private_key.pem 
+
+# 部署环境变量文件（含真实密钥；*.env.example 模板不受此规则影响，可正常提交）
+.env
+deploy/.env
