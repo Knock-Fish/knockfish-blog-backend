@@ -91,6 +91,10 @@
         where ur.user_id = #{userId}
     </select>
 
+    <delete id="deleteById">
+        delete from `user` where user_id = #{userId}
+    </delete>
+
     <select id="selectUserRoleVOByUserId" resultType="com.knockfish.vo.user.UserRoleVO">
         select r.role_id, r.role_name
         from user_role ur

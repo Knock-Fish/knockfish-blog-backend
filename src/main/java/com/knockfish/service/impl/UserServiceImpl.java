@@ -38,6 +38,9 @@ public class UserServiceImpl implements UserService {
     private final UserRoleRepository userRoleRepository;
     private final FileReferenceService fileReferenceService;
     private final UserConvert userConvert;
+
+    /** 超级管理员角色ID（role 表 role_id = 1），该角色账号禁止删除 */
+    private static final Long SUPER_ADMIN_ROLE_ID = 1L;
     private final BCryptPasswordEncoder passwordEncoder;
 
     @Override
@@ -154,5 +157,31 @@ public class UserServiceImpl implements UserService {
     public List<UserRoleVO> getUserRoles(Long userId) {
         List<UserRoleVO> roles = userRepository.selectUserRoleVOByUserId(userId);
         return roles != null ? roles : new ArrayList<>();
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    @CacheEvict(value = "userCache", allEntries = true)
+    public void deleteUser(Long userId, Long operatorId) {
+        if (userId == null) {
+            throw new CustomException(400, "用户ID不能为空");
+        }
+        User user = userRepository.selectUserById(userId);
+        if (user == null) {
+            throw new CustomException(404, "用户不存在");
+        }
+        if (userId.equals(operatorId)) {
+            throw new CustomException(400, "不能删除当前登录账号");
+        }
+        // 超级管理员账号不允许被删除（role_id = 1），避免把系统锁死
+        List<Long> roleIds = userRoleRepository.selectRoleIdsByUserId(userId);
+        if (roleIds != null && roleIds.contains(SUPER_ADMIN_ROLE_ID)) {
+            throw new CustomException(403, "不能删除超级管理员账号");
+        }
+
+        // 先清关联再删主表：user_role 有外键约束，顺序反了会报错
+        userRoleRepository.deleteByUserId(userId);
+        userRepository.deleteById(userId);
+        log.info("删除用户 userId={} username={} operator={}", userId, user.getUsername(), operatorId);
     }
 }

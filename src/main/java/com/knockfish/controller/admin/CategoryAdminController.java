@@ -1,9 +1,8 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.github.pagehelper.PageInfo;
 import com.knockfish.annotation.Log;
-import com.knockfish.annotation.PublicApi;
-import com.knockfish.annotation.RequiresPermission;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.knockfish.common.Result;
 import com.knockfish.dto.category.CategoryCreateDTO;
 import com.knockfish.dto.category.CategoryQueryDTO;
@@ -25,22 +24,14 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/category")
+@RequestMapping("/api/admin/category")
 @Tag(name = "分类管理", description = "文章分类相关接口")
-public class CategoryController {
+public class CategoryAdminController {
     private final CategoryService categoryService;
-
-    @PublicApi
-    @GetMapping("/with-site")
-    @Operation(summary = "获取分类列表（含站点）", description = "获取所有分类及其关联的站点信息")
-    @Log("获取分类列表(含站点)")
-    public Result<List<CategoryWithSiteListVO>> getCategoryWithSiteList(){
-        return Result.success(categoryService.getCategoryWithSiteList());
-    }
 
     @GetMapping("/with-site-count")
     @Operation(summary = "分页获取分类列表（含统计）", description = "分页查询分类列表，包含文章数量统计")
-    @RequiresPermission("blog:category:manage")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:category:manage')")
     @Log("查询分类列表(含统计)")
     public Result<PageResultVO<CategoryWithSiteCountVO>> getCategoryWithSiteCountList(
             @Parameter(description = "查询条件") CategoryQueryDTO query,
@@ -52,7 +43,7 @@ public class CategoryController {
 
     @GetMapping("/options")
     @Operation(summary = "获取分类选项", description = "获取分类下拉选项列表")
-    @RequiresPermission("blog:category:manage")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:category:manage')")
     @Log("获取分类选项")
     public Result<List<CategoryOptionVO>> getCategoryOption(){
         return Result.success(categoryService.getCategoryOption());
@@ -60,7 +51,7 @@ public class CategoryController {
 
     @PostMapping
     @Operation(summary = "新增分类", description = "创建新的文章分类")
-    @RequiresPermission("blog:category:add")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:category:add')")
     @Log("新增分类")
     public Result<Void> createCategory(@Parameter(description = "分类创建信息") @Valid @RequestBody CategoryCreateDTO categoryCreateDTO){
         categoryService.createCategory(categoryCreateDTO);
@@ -69,7 +60,7 @@ public class CategoryController {
 
     @PutMapping
     @Operation(summary = "更新分类", description = "更新分类信息")
-    @RequiresPermission("blog:category:edit")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:category:edit')")
     @Log("更新分类")
     public Result<Void> updateCategory(@Parameter(description = "分类更新信息") @Valid @RequestBody CategoryUpdateDTO categoryUpdateDTO){
         categoryService.updateCategory(categoryUpdateDTO);
@@ -78,7 +69,7 @@ public class CategoryController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "删除分类", description = "根据ID删除分类")
-    @RequiresPermission("blog:category:delete")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:category:delete')")
     @Log("删除分类")
     public Result<Void> deleteCategory(@Parameter(description = "分类ID") @PathVariable Long id){
         categoryService.deleteCategory(id);

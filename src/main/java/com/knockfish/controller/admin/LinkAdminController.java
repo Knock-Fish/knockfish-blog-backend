@@ -1,9 +1,8 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.github.pagehelper.PageInfo;
 import com.knockfish.annotation.Log;
-import com.knockfish.annotation.PublicApi;
-import com.knockfish.annotation.RequiresPermission;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.knockfish.common.Result;
 import com.knockfish.dto.link.LinkCreateDTO;
 import com.knockfish.dto.link.LinkQueryDTO;
@@ -23,14 +22,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/link")
+@RequestMapping("/api/admin/link")
 @Tag(name = "友链管理", description = "友链相关接口")
-public class LinkController {
+public class LinkAdminController {
     private final LinkService linkService;
 
     @GetMapping("/page")
     @Operation(summary = "分页查询友链列表", description = "根据条件分页查询友链")
-    @RequiresPermission("blog:link:manage")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:link:manage')")
     @Log("查询友链列表")
     public Result<PageResultVO<LinkVO>> getLinkListVO(
             @Parameter(description = "查询条件") LinkQueryDTO query,
@@ -40,17 +39,9 @@ public class LinkController {
         return Result.success(PageConvertUtil.convert(listVO));
     }
 
-    @GetMapping("/list")
-    @Operation(summary = "获取友链列表", description = "获取所有友链列表（公开接口）")
-    @PublicApi
-    public Result<List<LinkVO>> getLinkList() {
-        List<LinkVO> linkVOList = linkService.getLinkList();
-        return Result.success(linkVOList);
-    }
-
     @PostMapping
     @Operation(summary = "新增友链", description = "创建新的友链")
-    @RequiresPermission("blog:link:add")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:link:add')")
     @Log(value = "新增友链", recordResult = true)
     public Result<Long> createLink(@Parameter(description = "友链创建信息") @Valid @RequestBody LinkCreateDTO linkCreateDTO) {
         return Result.success(linkService.createLink(linkCreateDTO));
@@ -58,7 +49,7 @@ public class LinkController {
 
     @PutMapping
     @Operation(summary = "更新友链", description = "更新友链信息")
-    @RequiresPermission("blog:link:edit")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:link:edit')")
     @Log("更新友链")
     public Result<Void> updateLink(@Parameter(description = "友链更新信息") @Valid @RequestBody LinkUpdateDTO linkUpdateDTO) {
         linkService.updateLink(linkUpdateDTO);
@@ -67,7 +58,7 @@ public class LinkController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "删除友链", description = "根据ID删除友链")
-    @RequiresPermission("blog:link:delete")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:link:delete')")
     @Log("删除友链")
     public Result<Void> deleteLink(@Parameter(description = "友链ID") @PathVariable Long id) {
         linkService.deleteLink(id);

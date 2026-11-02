@@ -1,4 +1,4 @@
-package com.knockfish.controller;
+package com.knockfish.controller.auth;
 
 import com.knockfish.annotation.Log;
 import com.knockfish.common.Result;

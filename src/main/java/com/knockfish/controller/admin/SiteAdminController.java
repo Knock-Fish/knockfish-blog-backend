@@ -1,7 +1,7 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.github.pagehelper.PageInfo;
-import com.knockfish.annotation.RequiresPermission;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.knockfish.common.Result;
 import com.knockfish.dto.site.SiteCreateDTO;
 import com.knockfish.dto.site.SiteQueryDTO;
@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/site")
+@RequestMapping("/api/admin/site")
 @Tag(name = "站点管理", description = "站点相关接口")
-public class SiteController {
+public class SiteAdminController {
     private final SiteService siteService;
 
     @GetMapping("/with-category")
     @Operation(summary = "获取站点列表（含分类）", description = "分页查询站点列表，包含关联的分类信息")
-    @RequiresPermission("blog:site:manage")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:site:manage')")
     public Result<PageResultVO<SiteWithCategoryVO>> getSitesWithCategory(
             @Parameter(description = "查询条件") SiteQueryDTO query,
             @Parameter(description = "页码") @RequestParam(defaultValue = "1") Integer pageNum,
@@ -37,7 +37,7 @@ public class SiteController {
 
     @PostMapping
     @Operation(summary = "新增站点", description = "创建新的站点")
-    @RequiresPermission("blog:site:add")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:site:add')")
     public Result<Void> createSite(@Parameter(description = "站点创建信息") @Valid @RequestBody SiteCreateDTO siteCreateDTO){
         siteService.createSite(siteCreateDTO);
         return Result.success();
@@ -45,7 +45,7 @@ public class SiteController {
 
     @PutMapping
     @Operation(summary = "更新站点", description = "更新站点信息")
-    @RequiresPermission("blog:site:edit")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:site:edit')")
     public Result<Void> updateSite(@Parameter(description = "站点更新信息") @Valid @RequestBody SiteUpdateDTO siteUpdateDTO){
         siteService.updateSite(siteUpdateDTO);
         return Result.success();
@@ -53,7 +53,7 @@ public class SiteController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "删除站点", description = "根据ID删除站点")
-    @RequiresPermission("blog:site:delete")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:site:delete')")
     public Result<Void> deleteSite(@Parameter(description = "站点ID") @PathVariable Long id){
         siteService.deleteSite(id);
         return Result.success();

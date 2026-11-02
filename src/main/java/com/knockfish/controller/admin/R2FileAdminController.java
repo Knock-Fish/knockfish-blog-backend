@@ -1,4 +1,4 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.knockfish.common.Result;
 import com.knockfish.dto.r2_file.R2FileUploadDTO;
@@ -18,9 +18,9 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/r2-file")
+@RequestMapping("/api/admin/r2-file")
 @Tag(name = "R2文件管理", description = "Cloudflare R2文件存储相关接口")
-public class R2FileController {
+public class R2FileAdminController {
     private final R2FileService r2FileService;
 
     @PostMapping

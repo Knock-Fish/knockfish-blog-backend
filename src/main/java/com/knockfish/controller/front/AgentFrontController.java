@@ -1,7 +1,6 @@
-package com.knockfish.controller;
+package com.knockfish.controller.front;
 
 import com.knockfish.annotation.Log;
-import com.knockfish.annotation.PublicApi;
 import com.knockfish.common.Result;
 import com.knockfish.service.AgentService;
 import com.knockfish.vo.agent.AgentSiteInfoVO;
@@ -28,9 +27,8 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/agent")
-@PublicApi
-public class AgentController {
+@RequestMapping("/api/front/agent")
+public class AgentFrontController {
     private final AgentService agentService;
 
     // 文章相关接口

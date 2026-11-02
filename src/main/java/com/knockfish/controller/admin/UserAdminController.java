@@ -1,9 +1,8 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.github.pagehelper.PageInfo;
 import com.knockfish.annotation.Log;
-import com.knockfish.annotation.PublicApi;
-import com.knockfish.annotation.RequiresPermission;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.knockfish.common.Result;
 import com.knockfish.dto.user.UserCreateDTO;
 import com.knockfish.dto.user.UserQueryDTO;
@@ -31,14 +30,14 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/user")
+@RequestMapping("/api/admin/user")
 @Tag(name = "用户管理", description = "用户相关接口")
-public class UserController {
+public class UserAdminController {
     private final UserService userService;
 
     @GetMapping("/page")
     @Operation(summary = "分页查询用户列表", description = "根据条件分页查询用户")
-    @RequiresPermission("blog:user:manage")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:user:manage')")
     @Log("查询用户列表")
     public Result<PageResultVO<UserVO>> getUserList(
             @Parameter(description = "查询条件") UserQueryDTO query,
@@ -48,25 +47,9 @@ public class UserController {
         return Result.success(PageConvertUtil.convert(listVO));
     }
 
-    @PublicApi
-    @GetMapping
-    @Operation(summary = "根据用户名查询用户", description = "根据用户名获取用户信息")
-    @Log("查询用户信息")
-    public Result<UserVO> getUserByUsername(@Parameter(description = "用户名") @RequestParam String username) {
-        return Result.success(userService.getUserByUsername(username));
-    }
-
-    @PublicApi
-    @GetMapping("/{id}")
-    @Operation(summary = "根据id查询用户", description = "根据id获取用户信息")
-    @Log("查询用户信息")
-    public Result<UserFrontVO> getUserById(@Parameter(description = "用户ID") @PathVariable Long id){
-        return Result.success(userService.getUserFrontById(id));
-    }
-
     @PostMapping
     @Operation(summary = "新增用户", description = "创建新用户")
-    @RequiresPermission("blog:user:add")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:user:add')")
     @Log("新增用户")
     public Result<Void> createUser(@Valid @RequestBody UserCreateDTO userCreateDTO) {
         userService.createUser(userCreateDTO);
@@ -103,7 +86,7 @@ public class UserController {
 
     @PutMapping("/role")
     @Operation(summary = "分配角色", description = "为用户分配角色")
-    @RequiresPermission("blog:user:role")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:user:role')")
     @Log("分配角色")
     public Result<Void> updateUserRoles(@Valid @RequestBody UserRoleUpdateDTO userRoleUpdateDTO) {
         userService.updateUserRoles(userRoleUpdateDTO);
@@ -112,8 +95,22 @@ public class UserController {
 
     @GetMapping("/{id}/roles")
     @Operation(summary = "查询用户角色", description = "根据用户ID查询用户拥有的角色")
-    @RequiresPermission("blog:user:manage")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:user:manage')")
     public Result<List<UserRoleVO>> getUserRoles(@Parameter(description = "用户ID") @PathVariable Long id) {
         return Result.success(userService.getUserRoles(id));
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "删除用户", description = "删除指定用户并清理角色关联；不允许删除自己与超级管理员")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:user:delete')")
+    @Log("删除用户")
+    public Result<Void> deleteUser(@Parameter(description = "用户ID") @PathVariable Long id) {
+        var authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null) {
+            throw new CustomException(401, "用户未登录");
+        }
+        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+        userService.deleteUser(id, userDetails.getUserId());
+        return Result.success();
     }
 }

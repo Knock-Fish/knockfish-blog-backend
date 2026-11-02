@@ -1,7 +1,7 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.knockfish.annotation.Log;
-import com.knockfish.annotation.RequiresPermission;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.knockfish.common.Result;
 import com.knockfish.service.DashboardService;
 import com.knockfish.vo.dashboard.ActivityVO;
@@ -22,15 +22,15 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/dashboard")
+@RequestMapping("/api/admin/dashboard")
 @Tag(name = "仪表盘", description = "仪表盘统计数据接口")
-public class DashboardController {
+public class DashboardAdminController {
 
     private final DashboardService dashboardService;
 
     @GetMapping("/overview")
     @Operation(summary = "获取仪表盘概览", description = "获取核心统计卡片数据")
-    @RequiresPermission("blog:dashboard:view")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:dashboard:view')")
     @Log("获取仪表盘概览")
     public Result<DashboardOverviewVO> getOverview() {
         return Result.success(dashboardService.getOverview());
@@ -38,7 +38,7 @@ public class DashboardController {
 
     @GetMapping("/article-trend")
     @Operation(summary = "获取文章发布趋势", description = "获取文章发布数量趋势数据")
-    @RequiresPermission("blog:dashboard:view")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:dashboard:view')")
     @Log("获取文章发布趋势")
     public Result<ArticleTrendVO> getArticleTrend(
             @Parameter(description = "时间周期：weekly/monthly/yearly") 
@@ -50,7 +50,7 @@ public class DashboardController {
 
     @GetMapping("/latest-articles")
     @Operation(summary = "获取最近文章", description = "获取最近发布的文章列表")
-    @RequiresPermission("blog:dashboard:view")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:dashboard:view')")
     @Log("获取最近文章")
     public Result<List<ArticleLatestVO>> getLatestArticles(
             @Parameter(description = "数量限制") 
@@ -60,7 +60,7 @@ public class DashboardController {
 
     @GetMapping("/tag-cloud")
     @Operation(summary = "获取标签云", description = "获取标签及文章数量统计")
-    @RequiresPermission("blog:dashboard:view")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:dashboard:view')")
     @Log("获取标签云")
     public Result<List<TagWithArticleCountVO>> getTagCloud() {
         return Result.success(dashboardService.getTagCloud());
@@ -68,7 +68,7 @@ public class DashboardController {
 
     @GetMapping("/category-stats")
     @Operation(summary = "获取文章分类统计", description = "获取各分类下文章数量统计，用于饼图展示")
-    @RequiresPermission("blog:dashboard:view")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:dashboard:view')")
     @Log("获取文章分类统计")
     public Result<List<TagWithArticleCountVO>> getCategoryStats() {
         return Result.success(dashboardService.getArticleCategoryStats());
@@ -76,7 +76,7 @@ public class DashboardController {
 
     @GetMapping("/activities")
     @Operation(summary = "获取最近动态", description = "获取用户最近的操作动态列表")
-    @RequiresPermission("blog:dashboard:view")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:dashboard:view')")
     @Log("获取最近动态")
     public Result<List<ActivityVO>> getActivities(
             @Parameter(description = "数量限制")

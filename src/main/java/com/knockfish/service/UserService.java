@@ -30,4 +30,12 @@ public interface UserService {
     void updateUserRoles(UserRoleUpdateDTO userRoleUpdateDTO);
 
     List<UserRoleVO> getUserRoles(Long userId);
+
+    /**
+     * 删除用户（含 user_role 关联清理）
+     *
+     * @param userId     待删除用户ID
+     * @param operatorId 当前登录用户ID，用于拦截"删除自己"
+     */
+    void deleteUser(Long userId, Long operatorId);
 }

@@ -33,5 +33,8 @@ public interface UserRepository {
 
     List<String> selectRolesByUserId(@Param("userId") Long userId);
 
+    /** 删除用户（物理删除，关联的 user_role 由 Service 先行清理） */
+    int deleteById(@Param("userId") Long userId);
+
     List<com.knockfish.vo.user.UserRoleVO> selectUserRoleVOByUserId(@Param("userId") Long userId);
 }

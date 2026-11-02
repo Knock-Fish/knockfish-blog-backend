@@ -1,7 +1,7 @@
-package com.knockfish.controller;
+package com.knockfish.controller.admin;
 
 import com.github.pagehelper.PageInfo;
-import com.knockfish.annotation.RequiresPermission;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.knockfish.common.Result;
 import com.knockfish.dto.role.RoleCreateDTO;
 import com.knockfish.dto.role.RolePermissionUpdateDTO;
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/role")
+@RequestMapping("/api/admin/role")
 @Tag(name = "角色管理", description = "角色相关接口")
-public class RoleController {
+public class RoleAdminController {
     private final RoleService roleService;
 
 
@@ -38,7 +38,7 @@ public class RoleController {
 
     @PostMapping
     @Operation(summary = "新增角色", description = "创建新的角色")
-    @RequiresPermission("blog:role:add")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:role:add')")
     public Result<Void> createRole(@Parameter(description = "角色创建信息") @Valid @RequestBody RoleCreateDTO roleCreateDTO){
         roleService.createRole(roleCreateDTO);
         return Result.success();
@@ -46,7 +46,7 @@ public class RoleController {
 
     @PutMapping
     @Operation(summary = "更新角色", description = "更新角色信息")
-    @RequiresPermission("blog:role:edit")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:role:edit')")
     public Result<Void> updateRole(@Parameter(description = "角色更新信息") @Valid @RequestBody RoleUpdateDTO roleUpdateDTO){
         roleService.updateRole(roleUpdateDTO);
         return Result.success();
@@ -54,7 +54,7 @@ public class RoleController {
 
     @PutMapping("/permission")
     @Operation(summary = "更新角色权限", description = "更新角色的权限配置")
-    @RequiresPermission("blog:permission:assign")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:permission:assign')")
     public Result<Void> updateRolePermissions(@Parameter(description = "角色权限更新信息") @Valid @RequestBody RolePermissionUpdateDTO rolePermissionUpdateDTO){
         roleService.updateRolePermissions(rolePermissionUpdateDTO);
         return Result.success();
@@ -62,7 +62,7 @@ public class RoleController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "删除角色", description = "根据ID删除角色")
-    @RequiresPermission("blog:role:delete")
+    @PreAuthorize("hasAuthority('PERMISSION_blog:role:delete')")
     public Result<Void> deleteRole(@Parameter(description = "角色ID") @PathVariable Long id){
         roleService.deleteRole(id);
         return Result.success();
