@@ -6,7 +6,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.boot.autoconfigure.cache.RedisCacheManagerBuilderCustomizer;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.Cache;
+import org.springframework.cache.annotation.CachingConfigurer;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.interceptor.CacheErrorHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
@@ -25,9 +29,10 @@ import java.util.Map;
  * 2. 使用 GenericJackson2JsonRedisSerializer 做值序列化（避免 JDK 序列化兼容性问题）
  * 3. 针对各业务 cacheName 配置独立 TTL（按业务热点/更新频率设置）
  */
+@Slf4j
 @Configuration
 @EnableCaching
-public class RedisCacheConfig {
+public class RedisCacheConfig implements CachingConfigurer {
 
     /**
      * 各缓存名 -> TTL（秒）
@@ -80,6 +85,37 @@ public class RedisCacheConfig {
             builder.cacheDefaults(base);
             CACHE_TTLS.forEach((name, ttl) ->
                     builder.withCacheConfiguration(name, base.entryTtl(ttl)));
+        };
+    }
+
+    /**
+     * 缓存故障降级：Redis 连不上时只记日志并回源数据库，不让业务接口 500。
+     *
+     * <p>默认的 SimpleCacheErrorHandler 会把 RedisConnectionFailureException 直接抛出，
+     * 结果就是"Redis 抖一下，全站接口报错"。
+     */
+    @Override
+    public CacheErrorHandler errorHandler() {
+        return new CacheErrorHandler() {
+            @Override
+            public void handleCacheGetError(RuntimeException e, Cache cache, Object key) {
+                log.warn("缓存读取失败，已回源。cache={} key={} reason={}", cache.getName(), key, e.getMessage());
+            }
+
+            @Override
+            public void handleCachePutError(RuntimeException e, Cache cache, Object key, Object value) {
+                log.warn("缓存写入失败，已忽略。cache={} key={} reason={}", cache.getName(), key, e.getMessage());
+            }
+
+            @Override
+            public void handleCacheEvictError(RuntimeException e, Cache cache, Object key) {
+                log.warn("缓存清除失败，已忽略。cache={} key={} reason={}", cache.getName(), key, e.getMessage());
+            }
+
+            @Override
+            public void handleCacheClearError(RuntimeException e, Cache cache) {
+                log.warn("缓存清空失败，已忽略。cache={} reason={}", cache.getName(), e.getMessage());
+            }
         };
     }
 }

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.knockfish.repository.GalleryAlbumRepository">
+
+    <!-- 封面取 thumb_key；隐藏/回收站里的图不当封面，否则锁住的图会从封面上漏出去 -->
+    <sql id="albumColumns">
+        a.album_id,
+        a.name,
+        a.description,
+        a.sort_order,
+        a.status,
+        a.create_time,
+        case when a.password_hash is null then 0 else 1 end as locked,
+        a.cover_photo_id,
+        (select p.thumb_key from `gallery_photo` p
+         where p.photo_id = a.cover_photo_id and p.status = 0) as cover_key,
+        (select count(*) from `gallery_photo` p where p.album_id = a.album_id and p.status = 0) as photo_count
+    </sql>
+
+    <select id="selectList" resultType="com.knockfish.vo.gallery.GalleryAlbumVO">
+        select
+        <include refid="albumColumns"/>
+        from `gallery_album` a
+        <where>
+            <if test="status != null">and a.status = #{status}</if>
+            <if test="keyword != null and keyword != ''">and a.name like concat('%', #{keyword}, '%')</if>
+        </where>
+        order by a.sort_order asc, a.album_id asc
+    </select>
+
+    <select id="selectVOById" resultType="com.knockfish.vo.gallery.GalleryAlbumVO">
+        select
+        <include refid="albumColumns"/>
+        from `gallery_album` a
+        where a.album_id = #{albumId}
+    </select>
+
+    <select id="selectById" resultType="com.knockfish.entity.GalleryAlbum">
+        select *
+        from `gallery_album`
+        where album_id = #{albumId}
+    </select>
+
+    <!-- 封面不在这里设：新建的相册还没有照片，封面统一走 updateCover -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="albumId">
+        insert into `gallery_album`
+        (`name`, `description`, `password_hash`, `password_ver`,
+         `sort_order`, `status`, `create_time`)
+        values (#{name}, #{description}, #{passwordHash}, #{passwordVer},
+                #{sortOrder}, #{status}, #{createTime})
+    </insert>
+
+    <update id="update">
+        update `gallery_album`
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="passwordHash != null">password_hash = #{passwordHash},</if>
+            <if test="passwordVer != null">password_ver = #{passwordVer},</if>
+            <if test="sortOrder != null">sort_order = #{sortOrder},</if>
+            <if test="status != null">status = #{status},</if>
+        </set>
+        where album_id = #{albumId}
+    </update>
+
+    <update id="updateCover">
+        update `gallery_album`
+        set cover_photo_id = #{photoId,jdbcType=BIGINT}
+        where album_id = #{albumId}
+    </update>
+
+    <update id="clearCoverByPhotoId">
+        update `gallery_album`
+        set cover_photo_id = null
+        where cover_photo_id = #{photoId}
+    </update>
+
+    <!-- 批量归册后断开封面：目标相册自己的封面要留着，所以带上 album_id != 目标 -->
+    <update id="clearCoverByPhotoIds">
+        update `gallery_album`
+        set cover_photo_id = null
+        where cover_photo_id in
+        <foreach collection="photoIds" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        <if test="albumId != null">
+            and album_id != #{albumId}
+        </if>
+    </update>
+
+    <update id="clearPhotos">
+        update `gallery_photo`
+        set album_id = null
+        where album_id = #{albumId}
+    </update>
+
+    <update id="updatePassword">
+        update `gallery_album`
+        set password_hash = #{passwordHash},
+            password_ver  = #{passwordVer}
+        where album_id = #{albumId}
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from `gallery_album`
+        where album_id = #{albumId}
+    </delete>
+
+</mapper>

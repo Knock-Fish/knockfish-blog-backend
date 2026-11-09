@@ -185,6 +185,24 @@ public Map<String, Object> uploadR2File(R2FileUploadDTO uploadDTO) {
     }
 
     @Override
+    public void putObject(String key, byte[] bytes, String contentType) {
+        PutObjectRequest request = PutObjectRequest.builder()
+                .bucket(r2FileConfig.getBucketName())
+                .key(key)
+                .contentType(contentType)
+                .build();
+        s3Client.putObject(request, RequestBody.fromBytes(bytes));
+    }
+
+    @Override
+    public String buildUrl(String key) {
+        if (key == null || key.isEmpty()) {
+            return null;
+        }
+        return r2FileConfig.getCdnDomain() + "/" + key;
+    }
+
+    @Override
     public String getR2FileUrl(String key) {
         try {
             // 使用ListObjectsV2来查找包含该文件名的对象

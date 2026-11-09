@@ -23,4 +23,17 @@ public interface R2FileService {
     boolean deleteR2File(String key);
 
     boolean batchDeleteR2File(List<String> keys);
+
+    /**
+     * 按指定 key 上传字节流（图库等需要自定义 key 与派生图的场景用）。
+     * 不做任何转码，调用方决定 contentType 与内容。
+     *
+     * @param key         对象 key
+     * @param bytes       文件字节
+     * @param contentType MIME 类型
+     */
+    void putObject(String key, byte[] bytes, String contentType);
+
+    /** 用 CDN 域名拼出可访问 URL */
+    String buildUrl(String key);
 }

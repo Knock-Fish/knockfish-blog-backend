@@ -13,8 +13,8 @@ spring:
     options: -Djava.net.preferIPv4Stack=true
   servlet:
     multipart:
-      max-file-size: 10MB
-      max-request-size: 50MB
+      max-file-size: 20MB
+      max-request-size: 100MB
       enabled: true
   application:
     name: knockfish-blog-backend
@@ -44,6 +44,11 @@ spring:
           max-idle: 10
           min-idle: 5
           max-wait: 5000
+# 图库相册令牌：生产用环境变量覆盖，否则重启后旧令牌失效（需重新输密码）
+gallery:
+  token-secret: ${GALLERY_TOKEN_SECRET:}
+  token-ttl-minutes: ${GALLERY_TOKEN_TTL_MINUTES:30}
+
 jwt:
   # 本地默认读 classpath；生产可用 JWT_PRIVATE_KEY=file:/opt/knockfish/private_key.pem 覆盖
   private-key: ${JWT_PRIVATE_KEY:classpath:private_key.pem}
@@ -64,6 +69,7 @@ upload:
     article: article/
     note: note/
     background: background/
+    gallery: gallery/
 
 cloud:
   aws:

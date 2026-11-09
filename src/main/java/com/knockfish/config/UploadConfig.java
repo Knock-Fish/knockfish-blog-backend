@@ -16,5 +16,7 @@ public class UploadConfig {
         private String article;
         private String note;
         private String background;
+        /** 图库 */
+        private String gallery;
     }
 }
